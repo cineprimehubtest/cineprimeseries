@@ -15,16 +15,14 @@ function loadLocalCatalog(): Series[] {
     if (fs.existsSync(CATALOG_FILE_PATH)) {
       const content = fs.readFileSync(CATALOG_FILE_PATH, "utf-8");
       const parsed = JSON.parse(content);
-      if (Array.isArray(parsed) && parsed.length > 0) {
+      if (Array.isArray(parsed)) {
         return parsed;
       }
     }
   } catch (err) {
     console.warn("[Catalog] Error loading local catalog:", err);
   }
-  // Default to Loki (Season 1 and 2) from seed data
-  const lokiOnly = INITIAL_SERIES.filter((s) => s.slug === "loki" || s.slug === "heart-beat");
-  return lokiOnly.length > 0 ? lokiOnly : INITIAL_SERIES.slice(0, 2);
+  return [];
 }
 
 // Helper to save persistent catalog to disk

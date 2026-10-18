@@ -232,13 +232,6 @@ function SearchContent() {
                   cast={seriesCastMap.get(file.seriesId) || seriesCastMap.get(file.seriesSlug) || []}
                 />
               ))}
-
-              {/* End of Feed Footer matching Screenshot 1 */}
-              <div className="pt-8 pb-4 text-center">
-                <p className="text-xs text-slate-500 tracking-wider">
-                  You&apos;ve reached the end of the feed.
-                </p>
-              </div>
             </>
           ) : (
             <div className="py-16 text-center rounded-2xl bg-white/[0.02] border border-white/5 p-6">
