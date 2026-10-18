@@ -16,6 +16,8 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [selectedSeries, setSelectedSeries] = useState<Series | null>(null);
   const router = useRouter();
 
   if (!seriesList || seriesList.length === 0) return null;
@@ -24,14 +26,14 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
   const series = seriesList[currentIndex] || seriesList[0];
   const releaseYear = series.firstAirDate ? series.firstAirDate.substring(0, 4) : "2026";
 
-  // Auto-advance slideshow every 7 seconds
+  // Auto-advance slideshow every 7 seconds, but PAUSE when hovered or modal is open
   useEffect(() => {
-    if (seriesList.length <= 1) return;
+    if (seriesList.length <= 1 || isInfoOpen || isTrailerOpen || isHovered) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % seriesList.length);
     }, 7000);
     return () => clearInterval(interval);
-  }, [seriesList.length]);
+  }, [seriesList.length, isInfoOpen, isTrailerOpen, isHovered]);
 
   const handlePrev = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -49,7 +51,11 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
 
   return (
     <>
-      <div className="relative w-full rounded-3xl overflow-hidden bg-[#070911] border border-white/[0.08] shadow-2xl transition-all duration-500 min-h-[440px] md:min-h-[480px] flex items-center group">
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="relative w-full rounded-3xl overflow-hidden bg-[#070911] border border-white/[0.08] shadow-2xl transition-all duration-500 min-h-[440px] md:min-h-[480px] flex items-center group"
+      >
         {/* Cinematic Backdrop Image */}
         {series.backdropUrl || series.posterUrl ? (
           <Image
@@ -107,7 +113,10 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
 
               {series.trailerVideoId && (
                 <button
-                  onClick={() => setIsTrailerOpen(true)}
+                  onClick={() => {
+                    setSelectedSeries(series);
+                    setIsTrailerOpen(true);
+                  }}
                   className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md border border-white/10 transition-colors"
                 >
                   <Play size={11} className="fill-current text-amber-400" />
@@ -171,7 +180,10 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setIsInfoOpen(true)}
+                  onClick={() => {
+                    setSelectedSeries(series);
+                    setIsInfoOpen(true);
+                  }}
                   aria-label="View Series Details"
                   className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white border border-white/15 backdrop-blur-md transition-colors"
                   title="View Series Info"
@@ -234,17 +246,23 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
 
       {/* Info Modal matching Image 5 (no scrolling, clean, with redirect button) */}
       <SeriesInfoModal
-        series={series}
+        series={selectedSeries || series}
         isOpen={isInfoOpen}
-        onClose={() => setIsInfoOpen(false)}
+        onClose={() => {
+          setIsInfoOpen(false);
+          setSelectedSeries(null);
+        }}
       />
 
       {/* Official YouTube Trailer Modal */}
       <TrailerModal
         isOpen={isTrailerOpen}
-        onClose={() => setIsTrailerOpen(false)}
-        title={series.title}
-        videoId={series.trailerVideoId}
+        onClose={() => {
+          setIsTrailerOpen(false);
+          setSelectedSeries(null);
+        }}
+        title={(selectedSeries || series).title}
+        videoId={(selectedSeries || series).trailerVideoId}
       />
     </>
   );

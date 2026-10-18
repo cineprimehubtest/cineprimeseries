@@ -30,8 +30,8 @@ export const Header: React.FC = () => {
 
         {/* Center: Golden Wordmark matching cineplexweb */}
         <Link href="/" className="group flex items-center">
-          <span className="font-serif tracking-[0.35em] text-xl sm:text-2xl font-bold bg-gradient-to-r from-amber-200 via-orange-300 to-rose-400 bg-clip-text text-transparent group-hover:brightness-110 transition-all drop-shadow-[0_2px_12px_rgba(251,191,36,0.25)] select-none">
-            C I N E P R I M E
+          <span className="font-serif tracking-[0.25em] sm:tracking-[0.3em] text-base sm:text-xl font-bold bg-gradient-to-r from-amber-200 via-orange-300 to-rose-400 bg-clip-text text-transparent group-hover:brightness-110 transition-all drop-shadow-[0_2px_12px_rgba(251,191,36,0.25)] select-none">
+            C I N E P R I M E S E R I E S
           </span>
         </Link>
 

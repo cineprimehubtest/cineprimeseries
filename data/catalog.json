@@ -6,8 +6,13 @@
     "originalTitle": "ஹார்ட் பீட்",
     "overview": "A compassionate young medical intern joins RK Multi-Speciality Hospital in Chennai, navigating complex emergency surgeries, medical ethics, personal rivalries, and romantic tension among young doctors dedicated to saving lives.",
     "originalLanguage": "Tamil",
-    "originCountry": ["India"],
-    "genres": ["Drama", "Romance"],
+    "originCountry": [
+      "India"
+    ],
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
     "firstAirDate": "2024-03-08",
     "lastAirDate": "2026-10-15",
     "status": "Returning Series",
@@ -16,22 +21,54 @@
     "rating": 8.8,
     "voteCount": 4200,
     "ratingSource": "Hotstar / IMDb",
-    "posterUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&auto=format&fit=crop&q=80",
+    "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+    "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
     "tmdbId": 247890,
     "tvmazeId": 78912,
     "trailerVideoId": "sV69j2X2r7A",
-    "creators": ["Deepak Sundarrajan", "Star Vijay Original"],
-    "productionCompanies": ["Disney+ Hotstar", "Star India"],
+    "creators": [
+      "Deepak Sundarrajan",
+      "Star Vijay Original"
+    ],
+    "productionCompanies": [
+      "Disney+ Hotstar",
+      "Star India"
+    ],
     "tamilAudioStatus": "Confirmed",
     "tamilSubtitleStatus": "Confirmed",
     "downloadUrl": "https://t.me/CinePrimeSeries/41",
     "telegramUrl": "https://t.me/CinePrimeSeries",
     "cast": [
-      { "id": 101, "name": "Deepa Balu", "character": "Dr. Reena", "profileUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" },
-      { "id": 102, "name": "Anumol", "character": "Dr. Radhika", "profileUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&auto=format&fit=crop&q=80" },
-      { "id": 103, "name": "Charukesh", "character": "Dr. Teju", "profileUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" },
-      { "id": 104, "name": "Guru Lakshman", "character": "Dr. Naveen", "profileUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" }
+      {
+        "id": 101,
+        "name": "Deepa Balu",
+        "character": "Dr. Reena",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/549/1374918.jpg"
+      },
+      {
+        "id": 102,
+        "name": "Anumol",
+        "character": "Dr. Radhika",
+        "profileUrl": null
+      },
+      {
+        "id": 103,
+        "name": "Karthik Kumar",
+        "character": "Dr. Arjun",
+        "profileUrl": null
+      },
+      {
+        "id": 104,
+        "name": "Charukesh",
+        "character": "Dr. Teju",
+        "profileUrl": null
+      },
+      {
+        "id": 105,
+        "name": "Guru Lakshman",
+        "character": "Dr. Naveen",
+        "profileUrl": null
+      }
     ],
     "files": [
       {
@@ -42,12 +79,17 @@
         "fileName": "Heart Beat (2026) S03 EP (41-44) TRUE WEB-DL - 1080p - AVC - [Tam + Tel + Hin + Mal + Kan] - AAC - 1.3GB - ESub.mkv",
         "quality": "1080P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "Malayalam"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "Malayalam"
+        ],
         "sizeFormatted": "1.3 GB",
         "year": "2026",
         "rating": 8.8,
-        "posterUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
         "overview": "Emergency multi-vehicle pileup challenges the surgical residents while Dr. Reena faces a critical ethical donor decision.",
         "telegramUrl": "https://t.me/CinePrimeSeries/41"
       },
@@ -59,12 +101,17 @@
         "fileName": "Heart Beat (2026) S03 EP (41-44) TRUE WEB-DL - 720p - AVC - [Tam + Tel + Hin + Mal + Kan] - AAC - 650MB.mkv",
         "quality": "720P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "Malayalam"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "Malayalam"
+        ],
         "sizeFormatted": "650 MB",
         "year": "2026",
         "rating": 8.8,
-        "posterUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
         "overview": "Emergency multi-vehicle pileup challenges the surgical residents while Dr. Reena faces a critical ethical donor decision.",
         "telegramUrl": "https://t.me/CinePrimeSeries/42"
       },
@@ -76,12 +123,16 @@
         "fileName": "Heart Beat (2026) S03 EP (41-44) TRUE WEB-DL - 480p - AVC - [Tam + Tel + Mal] - AAC - 350MB.mkv",
         "quality": "480P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Malayalam"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Malayalam"
+        ],
         "sizeFormatted": "350 MB",
         "year": "2026",
         "rating": 8.8,
-        "posterUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
         "overview": "Emergency multi-vehicle pileup challenges the surgical residents while Dr. Reena faces a critical ethical donor decision.",
         "telegramUrl": "https://t.me/CinePrimeSeries/43"
       }
@@ -120,8 +171,15 @@
     "originalTitle": "Loki",
     "overview": "The mercurial God of Mischief steps out from under the shadow of his brother to embark on an adventure across the multiverse, grappling with the mysterious Time Variance Authority (TVA) and the concept of destiny itself.",
     "originalLanguage": "English",
-    "originCountry": ["United States"],
-    "genres": ["Action", "Adventure", "Fantasy", "Sci-Fi"],
+    "originCountry": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
     "firstAirDate": "2021-06-09",
     "lastAirDate": "2023-11-09",
     "status": "Ended",
@@ -130,22 +188,53 @@
     "rating": 8.2,
     "voteCount": 11450,
     "ratingSource": "Marvel Studios / TMDB",
-    "posterUrl": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1600&auto=format&fit=crop&q=80",
+    "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195717.jpg",
+    "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/317/794815.jpg",
     "tmdbId": 84958,
     "tvmazeId": 40994,
     "trailerVideoId": "dug56u8NN7g",
-    "creators": ["Michael Waldron"],
-    "productionCompanies": ["Marvel Studios", "Disney+"],
+    "creators": [
+      "Michael Waldron"
+    ],
+    "productionCompanies": [
+      "Marvel Studios",
+      "Disney+"
+    ],
     "tamilAudioStatus": "Confirmed",
     "tamilSubtitleStatus": "Confirmed",
     "downloadUrl": "https://t.me/CinePrimeSeries/loki",
     "telegramUrl": "https://t.me/CinePrimeSeries",
     "cast": [
-      { "id": 201, "name": "Tom Hiddleston", "character": "Loki", "profileUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80" },
-      { "id": 202, "name": "Owen Wilson", "character": "Mobius M. Mobius", "profileUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&auto=format&fit=crop&q=80" },
-      { "id": 203, "name": "Sophia Di Martino", "character": "Sylvie", "profileUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80" },
-      { "id": 204, "name": "Ke Huy Quan", "character": "Ouroboros (O.B.)", "profileUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80" }
+      {
+        "id": 201,
+        "name": "Tom Hiddleston",
+        "character": "Loki",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/46/117106.jpg"
+      },
+      {
+        "id": 202,
+        "name": "Owen Wilson",
+        "character": "Mobius M. Mobius",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/572/1430173.jpg"
+      },
+      {
+        "id": 203,
+        "name": "Sophia Di Martino",
+        "character": "Sylvie",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/3/8266.jpg"
+      },
+      {
+        "id": 204,
+        "name": "Wunmi Mosaku",
+        "character": "Hunter B-15",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/610/1526544.jpg"
+      },
+      {
+        "id": 205,
+        "name": "Gugu Mbatha-Raw",
+        "character": "Ravonna Renslayer",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/45/114825.jpg"
+      }
     ],
     "files": [
       {
@@ -156,12 +245,17 @@
         "fileName": "LOKI (2023) S02 EP01 TRUE WEB-DL - 1080p - AVC - [Tam + Tel + Hin + Eng] - AAC - 1.4GB - ESub.mkv",
         "quality": "1080P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "1.4 GB",
         "year": "2023",
         "rating": 8.2,
-        "posterUrl": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195717.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/317/794815.jpg",
         "overview": "Loki finds himself slipping uncontrollably through time between past, present, and future of the TVA.",
         "telegramUrl": "https://t.me/CinePrimeSeries/loki201"
       },
@@ -173,12 +267,17 @@
         "fileName": "LOKI (2023) S02 EP01 TRUE WEB-DL - 720p - AVC - [Tam + Tel + Hin + Eng] - AAC - 650MB - ESub.mkv",
         "quality": "720P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "650 MB",
         "year": "2023",
         "rating": 8.2,
-        "posterUrl": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195717.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/317/794815.jpg",
         "overview": "Loki finds himself slipping uncontrollably through time between past, present, and future of the TVA.",
         "telegramUrl": "https://t.me/CinePrimeSeries/loki201"
       },
@@ -190,12 +289,17 @@
         "fileName": "LOKI (2023) S02 EP01 TRUE WEB-DL - 480p - AVC - [Tam + Tel + Hin + Eng] - AAC - 300MB - ESub.mkv",
         "quality": "480P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "300 MB",
         "year": "2023",
         "rating": 8.2,
-        "posterUrl": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195717.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/317/794815.jpg",
         "overview": "Loki finds himself slipping uncontrollably through time between past, present, and future of the TVA.",
         "telegramUrl": "https://t.me/CinePrimeSeries/loki201"
       },
@@ -207,12 +311,17 @@
         "fileName": "LOKI (2021) S01 Complete WEB-DL - 1080p - x264 - [Tam + Tel + Hin + Eng] - 6.2GB - ESub.mkv",
         "quality": "1080P",
         "codec": "x264",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "6.2 GB",
         "year": "2021",
         "rating": 8.2,
-        "posterUrl": "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195717.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/317/794815.jpg",
         "overview": "The complete Season 1 collection following Loki's arrest and recruit by the TVA.",
         "telegramUrl": "https://t.me/CinePrimeSeries/loki101"
       }
@@ -245,8 +354,15 @@
     "originalTitle": "Stranger Things",
     "overview": "When a young boy vanishes, a small Indiana town uncovers a mystery involving secret government experiments, terrifying supernatural forces, and one strange little girl with telekinetic abilities.",
     "originalLanguage": "English",
-    "originCountry": ["United States"],
-    "genres": ["Sci-Fi", "Horror", "Drama", "Mystery"],
+    "originCountry": [
+      "United States"
+    ],
+    "genres": [
+      "Sci-Fi",
+      "Horror",
+      "Drama",
+      "Mystery"
+    ],
     "firstAirDate": "2016-07-15",
     "lastAirDate": "2025-12-20",
     "status": "Returning Series",
@@ -255,22 +371,54 @@
     "rating": 8.7,
     "voteCount": 16500,
     "ratingSource": "Netflix / TMDB",
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80",
+    "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg",
+    "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/70/175852.jpg",
     "tmdbId": 66732,
     "tvmazeId": 2993,
     "trailerVideoId": "b9EkMc79ZSU",
-    "creators": ["The Duffer Brothers"],
-    "productionCompanies": ["21 Laps Entertainment", "Monkey Massacre", "Netflix"],
+    "creators": [
+      "The Duffer Brothers"
+    ],
+    "productionCompanies": [
+      "21 Laps Entertainment",
+      "Monkey Massacre",
+      "Netflix"
+    ],
     "tamilAudioStatus": "Confirmed",
     "tamilSubtitleStatus": "Confirmed",
     "downloadUrl": "https://t.me/CinePrimeSeries/strangerthings",
     "telegramUrl": "https://t.me/CinePrimeSeries",
     "cast": [
-      { "id": 301, "name": "Millie Bobby Brown", "character": "Eleven", "profileUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" },
-      { "id": 302, "name": "David Harbour", "character": "Jim Hopper", "profileUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" },
-      { "id": 303, "name": "Winona Ryder", "character": "Joyce Byers", "profileUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&auto=format&fit=crop&q=80" },
-      { "id": 304, "name": "Finn Wolfhard", "character": "Mike Wheeler", "profileUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" }
+      {
+        "id": 301,
+        "name": "Winona Ryder",
+        "character": "Joyce Byers",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/204/511427.jpg"
+      },
+      {
+        "id": 302,
+        "name": "Caleb McLaughlin",
+        "character": "Lucas Sinclair",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/611/1527525.jpg"
+      },
+      {
+        "id": 303,
+        "name": "Finn Wolfhard",
+        "character": "Mike Wheeler",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/611/1527529.jpg"
+      },
+      {
+        "id": 304,
+        "name": "Gaten Matarazzo",
+        "character": "Dustin Henderson",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/611/1527523.jpg"
+      },
+      {
+        "id": 305,
+        "name": "Natalia Dyer",
+        "character": "Nancy Wheeler",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/158/396002.jpg"
+      }
     ],
     "files": [
       {
@@ -281,12 +429,16 @@
         "fileName": "Stranger Things S01 EP07 1080p WEB-DL x264 [Tam + Hin + Eng] - 855.23MB.mkv",
         "quality": "1080P",
         "codec": "x264",
-        "languages": ["Tamil", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "855.23 MB",
         "year": "2016",
         "rating": 8.7,
-        "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/70/175852.jpg",
         "overview": "Eleven uses sensory deprivation to locate Will in the Upside Down.",
         "telegramUrl": "https://t.me/CinePrimeSeries/st07"
       },
@@ -298,12 +450,16 @@
         "fileName": "Stranger Things S01 EP08 1080p WEB-DL x264 [Tam + Hin + Eng] - 949.90MB.mkv",
         "quality": "1080P",
         "codec": "x264",
-        "languages": ["Tamil", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "949.90 MB",
         "year": "2016",
         "rating": 8.7,
-        "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/70/175852.jpg",
         "overview": "The climactic battle against the Demogorgon in Hawkins Middle School.",
         "telegramUrl": "https://t.me/CinePrimeSeries/st08"
       },
@@ -315,12 +471,17 @@
         "fileName": "Stranger Things S04 Complete 1080p WEB-DL x264 [Tam + Tel + Hin + Eng] - 11.4GB - ESub.mkv",
         "quality": "1080P",
         "codec": "x264",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "11.4 GB",
         "year": "2022",
         "rating": 8.7,
-        "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/70/175852.jpg",
         "overview": "A new supernatural threat, Vecna, emerges from the Upside Down, targeting Hawkins teenagers.",
         "telegramUrl": "https://t.me/CinePrimeSeries/st04"
       }
@@ -344,8 +505,14 @@
     "originalTitle": "Fallout",
     "overview": "In a post-apocalyptic future Los Angeles, citizens must live in underground bunkers to protect themselves from radiation, mutants and bandits, until one dweller leaves Vault 33 on an audacious rescue mission into the wasteland.",
     "originalLanguage": "English",
-    "originCountry": ["United States"],
-    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "originCountry": [
+      "United States"
+    ],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
     "firstAirDate": "2024-04-10",
     "lastAirDate": "2024-04-10",
     "status": "Returning Series",
@@ -354,21 +521,54 @@
     "rating": 8.5,
     "voteCount": 9800,
     "ratingSource": "Prime Video / TMDB",
-    "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+    "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/599/1499142.jpg",
+    "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/514/1285808.jpg",
     "tmdbId": 106379,
     "tvmazeId": 48312,
     "trailerVideoId": "V-mugKDQDlg",
-    "creators": ["Jonathan Nolan", "Lisa Joy"],
-    "productionCompanies": ["Kilter Films", "Amazon MGM Studios"],
+    "creators": [
+      "Jonathan Nolan",
+      "Lisa Joy"
+    ],
+    "productionCompanies": [
+      "Kilter Films",
+      "Amazon MGM Studios"
+    ],
     "tamilAudioStatus": "Confirmed",
     "tamilSubtitleStatus": "Confirmed",
     "downloadUrl": "https://t.me/cineprimeseries/fallout01",
     "telegramUrl": "https://t.me/cineprimeseries",
     "cast": [
-      { "id": 401, "name": "Ella Purnell", "character": "Lucy MacLean", "profileUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80" },
-      { "id": 402, "name": "Walton Goggins", "character": "The Ghoul", "profileUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80" },
-      { "id": 403, "name": "Aaron Moten", "character": "Maximus", "profileUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" }
+      {
+        "id": 401,
+        "name": "Walton Goggins",
+        "character": "The Ghoul / Cooper Howard",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/4/10179.jpg"
+      },
+      {
+        "id": 402,
+        "name": "Ella Purnell",
+        "character": "Lucy MacLean",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/243/608111.jpg"
+      },
+      {
+        "id": 403,
+        "name": "Aaron Moten",
+        "character": "Maximus",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/514/1285155.jpg"
+      },
+      {
+        "id": 404,
+        "name": "Moises Arias",
+        "character": "Norm MacLean",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/145/364863.jpg"
+      },
+      {
+        "id": 405,
+        "name": "Frances Turner",
+        "character": "Barb Howard",
+        "profileUrl": "https://static.tvmaze.com/uploads/images/medium_portrait/517/1293769.jpg"
+      }
     ],
     "files": [
       {
@@ -379,12 +579,17 @@
         "fileName": "Fallout (2024) S01 Complete TRUE WEB-DL - 1080p - AVC - [Tam + Tel + Hin + Eng] - AAC - 8.4GB - ESub.mkv",
         "quality": "1080P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "8.4 GB",
         "year": "2024",
         "rating": 8.5,
-        "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/599/1499142.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/514/1285808.jpg",
         "overview": "Lucy emerges from Vault 33 into the dangerous post-nuclear Mojave Wasteland.",
         "telegramUrl": "https://t.me/cineprimeseries/fallout01"
       },
@@ -396,12 +601,17 @@
         "fileName": "Fallout (2024) S01 EP01 TRUE WEB-DL - 720p - AVC - [Tam + Tel + Hin + Eng] - 620MB.mkv",
         "quality": "720P",
         "codec": "AVC",
-        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "languages": [
+          "Tamil",
+          "Telugu",
+          "Hindi",
+          "English"
+        ],
         "sizeFormatted": "620 MB",
         "year": "2024",
         "rating": 8.5,
-        "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
-        "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/599/1499142.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/514/1285808.jpg",
         "overview": "The End: A sudden nuclear cataclysm shatters 1950s Los Angeles as bomb sirens wail.",
         "telegramUrl": "https://t.me/cineprimeseries/fallout02"
       }
