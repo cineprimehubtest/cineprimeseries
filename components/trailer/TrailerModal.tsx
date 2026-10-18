@@ -38,6 +38,7 @@ export const TrailerModal: React.FC<TrailerModalProps> = ({
               title={`${title} Official Trailer`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
               className="w-full h-full border-0"
             />
           </div>
