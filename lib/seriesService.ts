@@ -54,9 +54,9 @@ export async function getAllSeries(): Promise<Series[]> {
       }
     }
   } catch (error) {
-    console.warn("[SeriesService] Falling back to memory series:", (error as Error).message);
+    console.warn("[SeriesService] Falling back to local catalog:", (error as Error).message);
   }
-  return inMemorySeries;
+  return loadLocalCatalog();
 }
 
 // Find single series by slug
@@ -72,7 +72,7 @@ export async function getSeriesBySlug(slug: string): Promise<Series | null> {
     console.warn("[SeriesService] DB lookup error:", (err as Error).message);
   }
 
-  const found = inMemorySeries.find((s) => s.slug === cleanSlug);
+  const found = loadLocalCatalog().find((s) => s.slug === cleanSlug);
   return found || null;
 }
 

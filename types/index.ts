@@ -21,6 +21,8 @@ export interface LeechedFileItem {
   overview?: string;
   telegramUrl: string; // direct telegram channel/message link
   downloadUrl?: string;
+  channelMessageId?: number;
+  dbChannelId?: string;
 }
 
 export interface LanguageVerification {

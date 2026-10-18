@@ -170,14 +170,18 @@ export const FileDetailModal: React.FC<FileDetailModalProps> = ({
         {/* Big Action Buttons */}
         <div className="flex items-center gap-3 pt-2 border-t border-white/10">
           <a
-            href={file.telegramUrl}
+            href={
+              file.telegramUrl && file.telegramUrl.includes('CinePrimeSeries_bot')
+                ? file.telegramUrl
+                : `https://t.me/CinePrimeSeries_bot?start=${file.channelMessageId ? 'get_' + file.channelMessageId : 'file_' + file.id}`
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1"
           >
             <button className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-bold text-sm tracking-wide shadow-glow-cyan transition-all active:scale-95">
               <Send size={16} />
-              <span>Open in Telegram</span>
+              <span>Get File in Telegram Bot</span>
             </button>
           </a>
 

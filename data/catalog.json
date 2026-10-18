@@ -91,7 +91,9 @@
         "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
         "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
         "overview": "Emergency multi-vehicle pileup challenges the surgical residents while Dr. Reena faces a critical ethical donor decision.",
-        "telegramUrl": "https://t.me/CinePrimeSeries/41"
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_5",
+        "channelMessageId": 5,
+        "dbChannelId": "-1004461514415"
       },
       {
         "id": "hb-f2",
