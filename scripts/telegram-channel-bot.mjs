@@ -286,6 +286,46 @@ async function fetchOfficialMetadata(seriesTitle) {
   };
 }
 
+function getBatchInfo(file) {
+  const name = file.fileName;
+  const combMatch = name.match(/EP\s*\(\s*(\d+)\s*[- ]\s*(\d+)\s*\)/i);
+  if (combMatch) {
+    const endEp = parseInt(combMatch[2], 10);
+    const qRank = file.quality === '1080P' ? 3 : file.quality === '720P' ? 2 : 1;
+    return {
+      batchNum: endEp,
+      isCombined: true,
+      epNum: endEp,
+      subRank: 10 + qRank,
+    };
+  }
+  const epMatch = name.match(/S\d+E(\d+)/i);
+  if (epMatch) {
+    const epNum = parseInt(epMatch[1], 10);
+    const batchNum = Math.ceil(epNum / 4) * 4;
+    return {
+      batchNum,
+      isCombined: false,
+      epNum,
+      subRank: epNum,
+    };
+  }
+  return { batchNum: 0, isCombined: false, epNum: 0, subRank: 0 };
+}
+
+function sortFilesLatestFirst(list) {
+  return [...list].sort((a, b) => {
+    const infoA = getBatchInfo(a);
+    const infoB = getBatchInfo(b);
+    if (infoA.batchNum !== infoB.batchNum) {
+      return infoB.batchNum - infoA.batchNum;
+    }
+    if (infoA.isCombined && !infoB.isCombined) return -1;
+    if (!infoA.isCombined && infoB.isCombined) return 1;
+    return infoB.subRank - infoA.subRank;
+  });
+}
+
 // Index a file into catalog.json and MongoDB - STRICTLY GROUPS FILES INTO 1 SERIES
 async function indexFileFromChannel(messageId, rawFileName, fileSize) {
   try {
@@ -401,6 +441,9 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
       if (!series.files) series.files = [];
       series.files.unshift(fileItem);
     }
+
+    // Always keep files sorted from Latest to 1st (Combined 1080p, 720p, 480p, then single episodes E48..E01)
+    series.files = sortFilesLatestFirst(series.files);
 
     // Update series season and episode count
     series.numberOfEpisodes = series.files.length;
@@ -519,6 +562,39 @@ async function sendTelegramMessage(chatId, text, replyMarkup = null) {
   }
 }
 
+// Auto-prune deleted message from catalog.json and MongoDB Atlas
+async function removeDeletedMessageFromDatabase(messageId) {
+  try {
+    if (fs.existsSync(CATALOG_PATH)) {
+      const catalog = JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
+      let modified = false;
+      for (const s of catalog) {
+        const origCount = (s.files || []).length;
+        s.files = (s.files || []).filter((f) => f.channelMessageId !== messageId && f.id !== `tg-${messageId}`);
+        if (s.files.length !== origCount) {
+          s.numberOfEpisodes = s.files.length;
+          modified = true;
+        }
+      }
+      if (modified) {
+        fs.writeFileSync(CATALOG_PATH, JSON.stringify(catalog, null, 2), 'utf8');
+      }
+    }
+
+    if (isMongoConnected && mongoDb) {
+      await mongoDb.collection('files').deleteMany({
+        $or: [{ channelMessageId: messageId }, { id: `tg-${messageId}` }],
+      });
+      await mongoDb.collection('series').updateOne(
+        {},
+        { $pull: { files: { channelMessageId: messageId } } }
+      );
+    }
+  } catch (e) {
+    console.warn('Prune error:', e.message);
+  }
+}
+
 // Copy file from Database Channel into User's Private Chat
 async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
   try {
@@ -559,6 +635,17 @@ async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
       return true;
     } else {
       console.warn(`⚠️ Telegram copyMessage response:`, data);
+
+      if (data.description && data.description.includes('message to copy not found')) {
+        console.warn(`🗑️ [Auto-Pruned Dead File] Message #${messageId} was deleted from database channel.`);
+        await removeDeletedMessageFromDatabase(messageId);
+        await sendTelegramMessage(
+          userChatId,
+          `⚠️ <b>File Unavailable:</b>\n\nMessage #${messageId} was deleted or removed from the database channel.\n\nPlease choose from the active episodes on the website:\n🌐 http://localhost:3000/series/heart-beat`
+        );
+        return false;
+      }
+
       await sendTelegramMessage(
         userChatId,
         `⚠️ <b>File Retrieval Notice:</b>\n\nMessage #${messageId} could not be copied directly.\nPlease verify the file exists in database channel: <code>${DB_CHANNEL_ID}</code>.\n\n🌐 Visit website: http://localhost:3000`
@@ -631,22 +718,32 @@ async function startBotDaemon() {
 
             // Verify it belongs to the database channel
             if (chatIdStr === targetIdStr || chatIdStr.includes('4461514415')) {
-              const videoOrDoc = channelPost.video || channelPost.document || channelPost.audio;
-
-              // Ignore non-media messages (e.g. standalone text headers like "👇" or promotional emojis)
-              if (!videoOrDoc && (!channelPost.text || channelPost.text.length < 5 || channelPost.text.includes('👇'))) {
+              // 1. Explicitly ignore stickers, animations, and photos
+              if (channelPost.sticker || channelPost.animation || channelPost.photo) {
                 continue;
               }
 
+              // 2. Only accept video objects or documents with video formats
+              const isVideo = !!(
+                channelPost.video ||
+                (channelPost.document &&
+                  (channelPost.document.mime_type?.startsWith('video/') ||
+                    channelPost.document.file_name?.match(/\.(mkv|mp4|avi|webm|mov)$/i)))
+              );
+
+              if (!isVideo) {
+                continue;
+              }
+
+              const videoOrDoc = channelPost.video || channelPost.document;
               const fileName =
                 videoOrDoc?.file_name ||
                 (channelPost.caption ? channelPost.caption.split('\n')[0] : null) ||
-                (channelPost.text ? channelPost.text.split('\n')[0] : null) ||
-                `Series_Episode_${channelPost.message_id}.mkv`;
+                `Heart_Beat_Episode_${channelPost.message_id}.mkv`;
 
               const fileSize = videoOrDoc?.file_size || 0;
 
-              console.log(`📥 [Incoming File in Database Channel]`);
+              console.log(`📥 [Incoming Real Video in Database Channel]`);
               console.log(`   Message ID : ${channelPost.message_id}`);
               console.log(`   File Name  : ${fileName}`);
               console.log(`   File Size  : ${formatFileSize(fileSize)}`);

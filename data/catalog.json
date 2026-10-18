@@ -19,7 +19,7 @@
     "numberOfSeasons": 3,
     "currentSeasonNumber": 3,
     "seasonStatusText": "Season 3 (Current Season)",
-    "numberOfEpisodes": 152,
+    "numberOfEpisodes": 87,
     "rating": 8.5,
     "voteCount": 3500,
     "ratingSource": "IMDb",
@@ -72,28 +72,6 @@
     ],
     "files": [
       {
-        "id": "tg-361",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #361).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_361",
-        "channelMessageId": 361,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-360",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -113,6 +91,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_360",
         "channelMessageId": 360,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-353",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (45-48) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "759.43 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_353",
+        "channelMessageId": 353,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-346",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (45-48) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "421.12 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_346",
+        "channelMessageId": 346,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -204,138 +226,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-354",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #354).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_354",
-        "channelMessageId": 354,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-353",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (45-48) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "759.43 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_353",
-        "channelMessageId": 353,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-347",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #347).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_347",
-        "channelMessageId": 347,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-346",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (45-48) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "421.12 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_346",
-        "channelMessageId": 346,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-340",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #340).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_340",
-        "channelMessageId": 340,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-339",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #339).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_339",
-        "channelMessageId": 339,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-338",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -355,6 +245,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_338",
         "channelMessageId": 338,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-331",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (41-44) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "647.26 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_331",
+        "channelMessageId": 331,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-324",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (41-44) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "356.05 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_324",
+        "channelMessageId": 324,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -446,138 +380,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-332",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #332).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_332",
-        "channelMessageId": 332,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-331",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (41-44) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "647.26 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_331",
-        "channelMessageId": 331,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-325",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #325).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_325",
-        "channelMessageId": 325,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-324",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (41-44) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "356.05 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_324",
-        "channelMessageId": 324,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-318",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #318).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_318",
-        "channelMessageId": 318,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-317",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #317).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_317",
-        "channelMessageId": 317,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-316",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -597,6 +399,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_316",
         "channelMessageId": 316,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-309",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (37-40) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "608.42 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_309",
+        "channelMessageId": 309,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-302",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (37-40) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "336.41 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_302",
+        "channelMessageId": 302,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -688,138 +534,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-310",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #310).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_310",
-        "channelMessageId": 310,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-309",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (37-40) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "608.42 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_309",
-        "channelMessageId": 309,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-303",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #303).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_303",
-        "channelMessageId": 303,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-302",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (37-40) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "336.41 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_302",
-        "channelMessageId": 302,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-296",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #296).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_296",
-        "channelMessageId": 296,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-295",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #295).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_295",
-        "channelMessageId": 295,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-294",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -839,6 +553,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_294",
         "channelMessageId": 294,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-287",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (33-36) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "628.74 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_287",
+        "channelMessageId": 287,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-280",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (33-36) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "349.09 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_280",
+        "channelMessageId": 280,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -930,138 +688,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-288",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #288).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_288",
-        "channelMessageId": 288,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-287",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (33-36) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "628.74 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_287",
-        "channelMessageId": 287,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-281",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #281).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_281",
-        "channelMessageId": 281,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-280",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (33-36) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "349.09 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_280",
-        "channelMessageId": 280,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-274",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #274).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_274",
-        "channelMessageId": 274,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-273",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #273).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_273",
-        "channelMessageId": 273,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-272",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -1081,6 +707,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_272",
         "channelMessageId": 272,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-265",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (29-32) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "662.16 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_265",
+        "channelMessageId": 265,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-258",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (29-32) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "368.41 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_258",
+        "channelMessageId": 258,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -1172,138 +842,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-266",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #266).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_266",
-        "channelMessageId": 266,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-265",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (29-32) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "662.16 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_265",
-        "channelMessageId": 265,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-259",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #259).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_259",
-        "channelMessageId": 259,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-258",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (29-32) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "368.41 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_258",
-        "channelMessageId": 258,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-252",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #252).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_252",
-        "channelMessageId": 252,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-251",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #251).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_251",
-        "channelMessageId": 251,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-250",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -1323,6 +861,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_250",
         "channelMessageId": 250,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-243",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (25-28) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "536.48 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_243",
+        "channelMessageId": 243,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-236",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (25-28) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "300.51 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_236",
+        "channelMessageId": 236,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -1414,138 +996,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-244",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #244).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_244",
-        "channelMessageId": 244,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-243",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (25-28) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "536.48 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_243",
-        "channelMessageId": 243,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-237",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #237).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_237",
-        "channelMessageId": 237,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-236",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (25-28) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "300.51 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_236",
-        "channelMessageId": 236,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-230",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #230).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_230",
-        "channelMessageId": 230,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-229",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #229).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_229",
-        "channelMessageId": 229,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-228",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -1565,6 +1015,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_228",
         "channelMessageId": 228,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-221",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (21-24) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "576.95 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_221",
+        "channelMessageId": 221,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-214",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (21-24) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "314.46 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_214",
+        "channelMessageId": 214,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -1656,138 +1150,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-222",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #222).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_222",
-        "channelMessageId": 222,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-221",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (21-24) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "576.95 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_221",
-        "channelMessageId": 221,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-215",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #215).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_215",
-        "channelMessageId": 215,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-214",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (21-24) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "314.46 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_214",
-        "channelMessageId": 214,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-208",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #208).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_208",
-        "channelMessageId": 208,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-207",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #207).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_207",
-        "channelMessageId": 207,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-206",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -1807,6 +1169,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_206",
         "channelMessageId": 206,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-199",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (17-20) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "653.81 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_199",
+        "channelMessageId": 199,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-196",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (17-20) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "364.01 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_196",
+        "channelMessageId": 196,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -1898,138 +1304,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-200",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #200).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_200",
-        "channelMessageId": 200,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-199",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (17-20) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "653.81 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_199",
-        "channelMessageId": 199,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-197",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #197).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_197",
-        "channelMessageId": 197,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-196",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (17-20) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "364.01 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_196",
-        "channelMessageId": 196,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-194",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #194).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_194",
-        "channelMessageId": 194,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-193",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #193).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_193",
-        "channelMessageId": 193,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-192",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2049,6 +1323,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_192",
         "channelMessageId": 192,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-185",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (13-16) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "772.88 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_185",
+        "channelMessageId": 185,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-178",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (13-16) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "348.75 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_178",
+        "channelMessageId": 178,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -2096,94 +1414,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-189",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03E14 Unfinished Feeling.mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "284.43 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_189",
-        "channelMessageId": 189,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-188",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03E13 Unspoken Doubt.mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "309.99 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_188",
-        "channelMessageId": 188,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-186",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #186).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_186",
-        "channelMessageId": 186,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-185",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (13-16) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "772.88 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_185",
-        "channelMessageId": 185,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-183",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2203,6 +1433,28 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_183",
         "channelMessageId": 183,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-189",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03E14 Unfinished Feeling.mkv",
+        "quality": "1080P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "284.43 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_189",
+        "channelMessageId": 189,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -2228,6 +1480,28 @@
         "dbChannelId": "-1004461514415"
       },
       {
+        "id": "tg-188",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03E13 Unspoken Doubt.mkv",
+        "quality": "1080P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "309.99 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_188",
+        "channelMessageId": 188,
+        "dbChannelId": "-1004461514415"
+      },
+      {
         "id": "tg-181",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2250,94 +1524,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-179",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #179).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_179",
-        "channelMessageId": 179,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-178",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (13-16) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "348.75 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_178",
-        "channelMessageId": 178,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-172",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #172).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_172",
-        "channelMessageId": 172,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-171",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #171).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_171",
-        "channelMessageId": 171,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-170",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2357,6 +1543,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_170",
         "channelMessageId": 170,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-163",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (09-12) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "984.07 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_163",
+        "channelMessageId": 163,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-156",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (09-12) Combined 480p.mkv",
+        "quality": "480P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "445.03 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_156",
+        "channelMessageId": 156,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -2448,138 +1678,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-164",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #164).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_164",
-        "channelMessageId": 164,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-163",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (09-12) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "984.07 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_163",
-        "channelMessageId": 163,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-157",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #157).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_157",
-        "channelMessageId": 157,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-156",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (09-12) Combined 480p.mkv",
-        "quality": "480P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "445.03 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_156",
-        "channelMessageId": 156,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-150",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #150).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_150",
-        "channelMessageId": 150,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-149",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #149).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_149",
-        "channelMessageId": 149,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-148",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2599,6 +1697,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_148",
         "channelMessageId": 148,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-134",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (05-08) Combined WEBRip.mkv",
+        "quality": "1080P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "574.53 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_134",
+        "channelMessageId": 134,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-141",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (05-08) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "1012.14 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_141",
+        "channelMessageId": 141,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -2690,138 +1832,6 @@
         "dbChannelId": "-1004461514415"
       },
       {
-        "id": "tg-142",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #142).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_142",
-        "channelMessageId": 142,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-141",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (05-08) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1012.14 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_141",
-        "channelMessageId": 141,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-135",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #135).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_135",
-        "channelMessageId": 135,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-134",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (05-08) Combined WEBRip.mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "574.53 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_134",
-        "channelMessageId": 134,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-128",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #128).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_128",
-        "channelMessageId": 128,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-127",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #127).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_127",
-        "channelMessageId": 127,
-        "dbChannelId": "-1004461514415"
-      },
-      {
         "id": "tg-126",
         "seriesId": "series-heart-beat",
         "seriesSlug": "heart-beat",
@@ -2841,6 +1851,50 @@
         "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_126",
         "channelMessageId": 126,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-112",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (01-04) Combined WEBRip.mkv",
+        "quality": "1080P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "509.15 MB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_112",
+        "channelMessageId": 112,
+        "dbChannelId": "-1004461514415"
+      },
+      {
+        "id": "tg-119",
+        "seriesId": "series-heart-beat",
+        "seriesSlug": "heart-beat",
+        "seriesTitle": "Heart Beat",
+        "fileName": "Heart Beat S03 EP (01-04) Combined 720p.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": [
+          "Tamil",
+          "Multi-Audio"
+        ],
+        "sizeFormatted": "1.1 GB",
+        "year": "2026",
+        "rating": 8.5,
+        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
+        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
+        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
+        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_119",
+        "channelMessageId": 119,
         "dbChannelId": "-1004461514415"
       },
       {
@@ -2930,497 +1984,13 @@
         "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_122",
         "channelMessageId": 122,
         "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-120",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #120).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_120",
-        "channelMessageId": 120,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-119",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (01-04) Combined 720p.mkv",
-        "quality": "720P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.1 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_119",
-        "channelMessageId": 119,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-113",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #113).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_113",
-        "channelMessageId": 113,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-112",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 EP (01-04) Combined WEBRip.mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "509.15 MB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_112",
-        "channelMessageId": 112,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-106",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #106).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_106",
-        "channelMessageId": 106,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-99",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #99).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_99",
-        "channelMessageId": 99,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-96",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #96).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_96",
-        "channelMessageId": 96,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-94",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #94).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_94",
-        "channelMessageId": 94,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-87",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #87).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_87",
-        "channelMessageId": 87,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-80",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #80).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_80",
-        "channelMessageId": 80,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-73",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #73).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_73",
-        "channelMessageId": 73,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-71",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #71).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_71",
-        "channelMessageId": 71,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-64",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #64).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_64",
-        "channelMessageId": 64,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-57",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #57).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_57",
-        "channelMessageId": 57,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-50",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #50).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_50",
-        "channelMessageId": 50,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-48",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #48).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_48",
-        "channelMessageId": 48,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-41",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #41).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_41",
-        "channelMessageId": 41,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-34",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #34).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_34",
-        "channelMessageId": 34,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-27",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #27).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_27",
-        "channelMessageId": 27,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-25",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #25).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_25",
-        "channelMessageId": 25,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-18",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #18).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_18",
-        "channelMessageId": 18,
-        "dbChannelId": "-1004461514415"
-      },
-      {
-        "id": "tg-11",
-        "seriesId": "series-heart-beat",
-        "seriesSlug": "heart-beat",
-        "seriesTitle": "Heart Beat",
-        "fileName": "Heart Beat S03 Episode (File #11).mkv",
-        "quality": "1080P",
-        "codec": "AVC",
-        "languages": [
-          "Tamil",
-          "Multi-Audio"
-        ],
-        "sizeFormatted": "1.2 GB",
-        "year": "2026",
-        "rating": 8.5,
-        "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg",
-        "backdropUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg",
-        "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its passionate resident doctors and consultants navigate intense emergency cases, complex patient relationships, and emotional personal trials inside RK Hospital.",
-        "telegramUrl": "https://t.me/CinePrimeSeries_bot?start=get_11",
-        "channelMessageId": 11,
-        "dbChannelId": "-1004461514415"
       }
     ],
     "seasons": [
       {
         "seasonNumber": 3,
         "title": "Season 3",
-        "episodeCount": 152,
+        "episodeCount": 87,
         "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg"
       }
     ]
