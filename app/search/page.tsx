@@ -171,6 +171,7 @@ function SearchContent() {
           initialQuery={query}
           onSearch={handleSearchSubmit}
           autoFocus={!query}
+          showSuggestions={false}
         />
 
         {/* Filter Controls */}

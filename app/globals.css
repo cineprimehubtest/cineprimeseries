@@ -68,3 +68,76 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+/* Light Mode Overrides */
+html.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f4f6fa;
+  color: #0f172a;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 75px 120px, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 60px, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 230px 180px, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+}
+
+html.light header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .bg-\[\#070911\]\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+html.light .bg-\[\#0e1424\]\/70,
+html.light .bg-\[\#131b31\] {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light .bg-\[\#111422\],
+html.light .bg-\[\#111422\]\/80,
+html.light .bg-\[\#111422\]\/90 {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #1e293b !important;
+}
+
+html.light .text-white,
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/\[0\.06\],
+html.light .border-white\/\[0\.08\] {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light .bg-white\/5,
+html.light .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #1e293b !important;
+}
+
+html.light .glass-panel,
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
