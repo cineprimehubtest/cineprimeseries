@@ -133,11 +133,32 @@ export const SeriesInfoModal: React.FC<SeriesInfoModalProps> = ({
                     </span>
                   )}
                   <span className="text-slate-300">{releaseYear}</span>
-                  {series.numberOfSeasons && (
-                    <span className="text-slate-400 font-normal">
-                      {series.numberOfSeasons} Seasons
-                    </span>
-                  )}
+                  {(() => {
+                    const isCompleted =
+                      series.status === "Ended" ||
+                      series.status === "Canceled" ||
+                      series.slug === "stranger-things" ||
+                      series.slug === "loki";
+                    const seasonNum = series.currentSeasonNumber || series.numberOfSeasons || 1;
+                    const label = series.seasonStatusText || (isCompleted ? `Season ${seasonNum} (Completed)` : `Season ${seasonNum} (Current Season)`);
+
+                    return (
+                      <span
+                        className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
+                          isCompleted
+                            ? "bg-purple-950/80 border-purple-500/50 text-purple-300"
+                            : "bg-emerald-950/80 border-emerald-500/50 text-emerald-300"
+                        }`}
+                      >
+                        <span
+                          className={`w-1.5 h-1.5 rounded-full ${
+                            isCompleted ? "bg-purple-400" : "bg-emerald-400 animate-pulse"
+                          }`}
+                        />
+                        <span>{label}</span>
+                      </span>
+                    );
+                  })()}
                   <span className="px-2 py-0.5 rounded-md bg-white/10 border border-white/10 text-[10px] font-bold text-slate-300 uppercase">
                     TV SERIES
                   </span>

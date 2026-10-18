@@ -164,7 +164,9 @@
           }
         ]
       }
-    ]
+    ],
+    "currentSeasonNumber": 3,
+    "seasonStatusText": "Season 3 (Current Season)"
   },
   {
     "id": "series-loki",
@@ -347,7 +349,9 @@
         "episodeCount": 6,
         "episodes": []
       }
-    ]
+    ],
+    "currentSeasonNumber": 2,
+    "seasonStatusText": "Season 2 (Completed)"
   },
   {
     "id": "series-stranger-things",
@@ -367,7 +371,7 @@
     ],
     "firstAirDate": "2016-07-15",
     "lastAirDate": "2025-12-20",
-    "status": "Returning Series",
+    "status": "Ended",
     "numberOfSeasons": 5,
     "numberOfEpisodes": 42,
     "rating": 8.7,
@@ -498,7 +502,9 @@
         "episodeCount": 8,
         "episodes": []
       }
-    ]
+    ],
+    "currentSeasonNumber": 5,
+    "seasonStatusText": "Season 5 (Completed)"
   },
   {
     "id": "series-fallout",
@@ -618,6 +624,8 @@
         "telegramUrl": "https://t.me/cineprimeseries/fallout02"
       }
     ],
-    "seasons": []
+    "seasons": [],
+    "currentSeasonNumber": 1,
+    "seasonStatusText": "Season 1 (Current)"
   }
 ]

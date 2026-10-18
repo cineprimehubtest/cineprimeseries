@@ -166,7 +166,9 @@ export const INITIAL_SERIES: Series[] = [
           }
         ]
       }
-    ]
+    ],
+    "currentSeasonNumber": 3,
+    "seasonStatusText": "Season 3 (Current Season)"
   },
   {
     "id": "series-loki",
@@ -349,7 +351,9 @@ export const INITIAL_SERIES: Series[] = [
         "episodeCount": 6,
         "episodes": []
       }
-    ]
+    ],
+    "currentSeasonNumber": 2,
+    "seasonStatusText": "Season 2 (Completed)"
   },
   {
     "id": "series-stranger-things",
@@ -369,7 +373,7 @@ export const INITIAL_SERIES: Series[] = [
     ],
     "firstAirDate": "2016-07-15",
     "lastAirDate": "2025-12-20",
-    "status": "Returning Series",
+    "status": "Ended",
     "numberOfSeasons": 5,
     "numberOfEpisodes": 42,
     "rating": 8.7,
@@ -500,7 +504,9 @@ export const INITIAL_SERIES: Series[] = [
         "episodeCount": 8,
         "episodes": []
       }
-    ]
+    ],
+    "currentSeasonNumber": 5,
+    "seasonStatusText": "Season 5 (Completed)"
   },
   {
     "id": "series-fallout",
@@ -620,6 +626,8 @@ export const INITIAL_SERIES: Series[] = [
         "telegramUrl": "https://t.me/cineprimeseries/fallout02"
       }
     ],
-    "seasons": []
+    "seasons": [],
+    "currentSeasonNumber": 1,
+    "seasonStatusText": "Season 1 (Current)"
   }
 ];

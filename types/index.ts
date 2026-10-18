@@ -98,6 +98,8 @@ export interface Series {
   status: SeriesStatus | string;
   numberOfSeasons: number;
   numberOfEpisodes?: number;
+  currentSeasonNumber?: number;
+  seasonStatusText?: string;
   rating?: number;
   voteCount?: number;
   ratingSource?: string;

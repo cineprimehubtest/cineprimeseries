@@ -142,12 +142,37 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
                 </span>
               )}
               <span className="text-slate-300 font-medium">{releaseYear}</span>
-              {series.numberOfSeasons && (
-                <>
-                  <span className="text-slate-500">•</span>
-                  <span className="text-slate-300">{series.numberOfSeasons} Seasons</span>
-                </>
-              )}
+              {/* Current Season vs Completed Status Badge */}
+              {(() => {
+                const isCompleted =
+                  series.status === "Ended" ||
+                  series.status === "Canceled" ||
+                  series.slug === "stranger-things" ||
+                  series.slug === "loki";
+                const seasonNum = series.currentSeasonNumber || series.numberOfSeasons || 1;
+                const label = series.seasonStatusText || (isCompleted ? `Season ${seasonNum} (Completed)` : `Season ${seasonNum} (Current Season)`);
+
+                return (
+                  <>
+                    <span className="text-slate-500">•</span>
+                    <span
+                      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-bold border backdrop-blur-md ${
+                        isCompleted
+                          ? "bg-purple-950/80 border-purple-500/50 text-purple-300 shadow-sm"
+                          : "bg-emerald-950/80 border-emerald-500/50 text-emerald-300 shadow-sm"
+                      }`}
+                    >
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full ${
+                          isCompleted ? "bg-purple-400" : "bg-emerald-400 animate-pulse"
+                        }`}
+                      />
+                      <span>{label}</span>
+                    </span>
+                  </>
+                );
+              })()}
+
               {series.originalLanguage && (
                 <>
                   <span className="text-slate-500">•</span>
