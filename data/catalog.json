@@ -336,5 +336,76 @@
         "episodes": []
       }
     ]
+  },
+  {
+    "id": "series-fallout",
+    "slug": "fallout",
+    "title": "Fallout",
+    "originalTitle": "Fallout",
+    "overview": "In a post-apocalyptic future Los Angeles, citizens must live in underground bunkers to protect themselves from radiation, mutants and bandits, until one dweller leaves Vault 33 on an audacious rescue mission into the wasteland.",
+    "originalLanguage": "English",
+    "originCountry": ["United States"],
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "firstAirDate": "2024-04-10",
+    "lastAirDate": "2024-04-10",
+    "status": "Returning Series",
+    "numberOfSeasons": 1,
+    "numberOfEpisodes": 8,
+    "rating": 8.5,
+    "voteCount": 9800,
+    "ratingSource": "Prime Video / TMDB",
+    "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
+    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+    "tmdbId": 106379,
+    "tvmazeId": 48312,
+    "trailerVideoId": "V-mugKDQDlg",
+    "creators": ["Jonathan Nolan", "Lisa Joy"],
+    "productionCompanies": ["Kilter Films", "Amazon MGM Studios"],
+    "tamilAudioStatus": "Confirmed",
+    "tamilSubtitleStatus": "Confirmed",
+    "downloadUrl": "https://t.me/cineprimeseries/fallout01",
+    "telegramUrl": "https://t.me/cineprimeseries",
+    "cast": [
+      { "id": 401, "name": "Ella Purnell", "character": "Lucy MacLean", "profileUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80" },
+      { "id": 402, "name": "Walton Goggins", "character": "The Ghoul", "profileUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80" },
+      { "id": 403, "name": "Aaron Moten", "character": "Maximus", "profileUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" }
+    ],
+    "files": [
+      {
+        "id": "fallout-f1",
+        "seriesId": "series-fallout",
+        "seriesSlug": "fallout",
+        "seriesTitle": "Fallout",
+        "fileName": "Fallout (2024) S01 Complete TRUE WEB-DL - 1080p - AVC - [Tam + Tel + Hin + Eng] - AAC - 8.4GB - ESub.mkv",
+        "quality": "1080P",
+        "codec": "AVC",
+        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "sizeFormatted": "8.4 GB",
+        "year": "2024",
+        "rating": 8.5,
+        "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
+        "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+        "overview": "Lucy emerges from Vault 33 into the dangerous post-nuclear Mojave Wasteland.",
+        "telegramUrl": "https://t.me/cineprimeseries/fallout01"
+      },
+      {
+        "id": "fallout-f2",
+        "seriesId": "series-fallout",
+        "seriesSlug": "fallout",
+        "seriesTitle": "Fallout",
+        "fileName": "Fallout (2024) S01 EP01 TRUE WEB-DL - 720p - AVC - [Tam + Tel + Hin + Eng] - 620MB.mkv",
+        "quality": "720P",
+        "codec": "AVC",
+        "languages": ["Tamil", "Telugu", "Hindi", "English"],
+        "sizeFormatted": "620 MB",
+        "year": "2024",
+        "rating": 8.5,
+        "posterUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80",
+        "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1600&auto=format&fit=crop&q=80",
+        "overview": "The End: A sudden nuclear cataclysm shatters 1950s Los Angeles as bomb sirens wail.",
+        "telegramUrl": "https://t.me/cineprimeseries/fallout02"
+      }
+    ],
+    "seasons": []
   }
 ]

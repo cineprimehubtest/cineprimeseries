@@ -62,8 +62,8 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-10 animate-fade-in pb-12">
-      {/* Featured Hero Banner matching Screenshot 6 */}
-      {featured && <SeriesHero series={featured} />}
+      {/* Featured Hero Slideshow matching Image 3 with Backdrop + Portrait */}
+      {all.length > 0 && <SeriesHero seriesList={all} />}
 
       {/* Trending Searches Bar matching Screenshot 6 */}
       <div className="space-y-2.5">

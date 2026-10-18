@@ -60,22 +60,24 @@ export const Modal: React.FC<ModalProps> = ({
         className={`relative w-full ${maxWidthStyles[maxWidth]} max-h-[92vh] flex flex-col rounded-3xl bg-slate-950/85 border border-white/10 shadow-glass overflow-hidden text-slate-100 ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 md:p-6 border-b border-white/10 shrink-0 bg-white/[0.02]">
-          <div className="text-lg md:text-xl font-bold tracking-tight text-white flex-1 pr-4">
-            {title}
+        {/* Header - only show if title is provided */}
+        {title ? (
+          <div className="flex items-center justify-between p-4 md:p-5 border-b border-white/10 shrink-0 bg-white/[0.02]">
+            <div className="text-base md:text-lg font-bold tracking-tight text-white flex-1 pr-4">
+              {title}
+            </div>
+            <button
+              onClick={onClose}
+              aria-label="Close modal"
+              className="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <X size={18} />
+            </button>
           </div>
-          <button
-            onClick={onClose}
-            aria-label="Close modal"
-            className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-          >
-            <X size={20} />
-          </button>
-        </div>
+        ) : null}
 
         {/* Content body */}
-        <div className="overflow-y-auto p-4 md:p-6 custom-scrollbar flex-1">
+        <div className={`overflow-y-auto custom-scrollbar flex-1 ${title ? "p-4 md:p-6" : "p-4 md:p-5"}`}>
           {children}
         </div>
       </div>
