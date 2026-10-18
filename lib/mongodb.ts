@@ -27,6 +27,7 @@ if (uri) {
         serverSelectionTimeoutMS: 5000,
         connectTimeoutMS: 10000,
         maxPoolSize: 10,
+        family: 4,
       });
       global._mongoClientPromise = client.connect().catch((err) => {
         console.warn("[MongoDB] Initialization warning:", (err as Error).message);
@@ -39,6 +40,7 @@ if (uri) {
       serverSelectionTimeoutMS: 5000,
       connectTimeoutMS: 10000,
       maxPoolSize: 20,
+      family: 4,
     });
     clientPromise = client.connect().catch((err) => {
       console.warn("[MongoDB] Initialization warning:", (err as Error).message);

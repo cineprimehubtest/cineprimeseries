@@ -7,6 +7,7 @@ import { getSeriesBySlug, getAllSeries } from "@/lib/seriesService";
 import { Badge } from "@/components/ui/Badge";
 import { CastCarousel } from "@/components/cast/CastCarousel";
 import { EpisodeList } from "@/components/episodes/EpisodeList";
+import { LeechedFileCard } from "@/components/series/LeechedFileCard";
 import {
   Star,
   Calendar,
@@ -240,6 +241,28 @@ export default async function SeriesDetailPage({ params }: PageProps) {
         {series.cast && series.cast.length > 0 && (
           <div className="p-6 rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur-xl">
             <CastCarousel cast={series.cast} />
+          </div>
+        )}
+
+        {/* Available Files & Telegram Downloads */}
+        {series.files && series.files.length > 0 && (
+          <div className="p-6 rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur-xl space-y-4">
+            <div className="flex items-center justify-between border-b border-white/5 pb-3">
+              <div>
+                <span className="text-[10px] font-bold tracking-[0.25em] text-amber-400 uppercase block mb-1">
+                  A V A I L A B L E   D O W N L O A D S
+                </span>
+                <h2 className="text-lg md:text-xl font-serif font-bold text-white">
+                  Available Files ({series.files.length} Episodes &amp; Releases)
+                </h2>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[600px] overflow-y-auto pr-1">
+              {series.files.map((file) => (
+                <LeechedFileCard key={file.id} file={file} cast={series.cast} />
+              ))}
+            </div>
           </div>
         )}
 

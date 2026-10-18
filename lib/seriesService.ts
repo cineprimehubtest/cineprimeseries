@@ -41,6 +41,28 @@ function saveLocalCatalog(list: Series[]) {
 // In-memory catalog initialized from local file or seed
 let inMemorySeries: Series[] = loadLocalCatalog();
 
+function deduplicateSeries(list: Series[]): Series[] {
+  const map = new Map<string, Series>();
+  for (const s of list) {
+    if (!s || !s.slug) continue;
+    const key = s.slug.toLowerCase().trim();
+    if (!map.has(key)) {
+      map.set(key, { ...s });
+    } else {
+      const existing = map.get(key)!;
+      const combinedFiles = [...(existing.files || []), ...(s.files || [])];
+      const fileMap = new Map();
+      combinedFiles.forEach((f) => {
+        const k = f.channelMessageId || f.id;
+        if (!fileMap.has(k)) fileMap.set(k, f);
+      });
+      existing.files = Array.from(fileMap.values());
+      existing.numberOfEpisodes = existing.files.length;
+    }
+  }
+  return Array.from(map.values());
+}
+
 // Retrieve all series currently published in user's leeched catalogue
 export async function getAllSeries(): Promise<Series[]> {
   try {
@@ -48,13 +70,14 @@ export async function getAllSeries(): Promise<Series[]> {
     if (db) {
       const docs = await db.collection<Series>("series").find({}).toArray();
       if (docs && docs.length > 0) {
-        return docs.map((d: any) => ({ ...d, id: d.id || String(d._id) }));
+        const mapped = docs.map((d: any) => ({ ...d, id: d.id || String(d._id) }));
+        return deduplicateSeries(mapped);
       }
     }
   } catch (error) {
     console.warn("[SeriesService] Falling back to local catalog:", (error as Error).message);
   }
-  return loadLocalCatalog();
+  return deduplicateSeries(loadLocalCatalog());
 }
 
 // Find single series by slug
