@@ -120,6 +120,31 @@ html.light .text-slate-400 {
   color: #475569 !important;
 }
 
+/* Maintain light text and high contrast on dark cinematic surfaces in Light Mode */
+html.light .series-hero .text-white,
+html.light [role="dialog"] .text-white,
+html.light .preserve-dark .text-white,
+html.light .series-hero h1,
+html.light [role="dialog"] h2,
+html.light [role="dialog"] h3,
+html.light [role="dialog"] .font-black,
+html.light [role="dialog"] button.bg-gradient-to-r span,
+html.light [role="dialog"] button.bg-gradient-to-r {
+  color: #ffffff !important;
+}
+
+html.light .series-hero .text-slate-300,
+html.light [role="dialog"] .text-slate-300,
+html.light .preserve-dark .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+html.light .series-hero .text-slate-400,
+html.light [role="dialog"] .text-slate-400,
+html.light .preserve-dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
 html.light .border-white\/10,
 html.light .border-white\/15,
 html.light .border-white\/20,

@@ -14,6 +14,37 @@ interface FileDetailModalProps {
   onClose: () => void;
 }
 
+const CastAvatarItem: React.FC<{ member: CastMember }> = ({ member }) => {
+  const [hasError, setHasError] = React.useState(false);
+
+  return (
+    <div className="flex flex-col items-center text-center w-20 shrink-0">
+      <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gradient-to-tr from-slate-900 to-slate-800 border-2 border-white/15 shadow-md mb-1.5 flex items-center justify-center">
+        {member.profileUrl && !hasError ? (
+          <Image
+            src={member.profileUrl}
+            alt={member.name}
+            fill
+            className="object-cover"
+            sizes="64px"
+            onError={() => setHasError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-amber-600/30 to-purple-600/30 text-amber-300 font-bold text-base select-none">
+            {member.name.charAt(0).toUpperCase()}
+          </div>
+        )}
+      </div>
+      <span className="text-[11px] font-bold text-white line-clamp-1">
+        {member.name}
+      </span>
+      <span className="text-[10px] text-slate-400 line-clamp-1">
+        {member.character}
+      </span>
+    </div>
+  );
+};
+
 export const FileDetailModal: React.FC<FileDetailModalProps> = ({
   file,
   cast = [],
@@ -139,29 +170,7 @@ export const FileDetailModal: React.FC<FileDetailModalProps> = ({
             </h3>
             <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
               {cast.slice(0, 8).map((c) => (
-                <div key={c.id} className="flex flex-col items-center text-center w-20 shrink-0">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden bg-slate-900 border border-white/10 mb-1.5">
-                    {c.profileUrl ? (
-                      <Image
-                        src={c.profileUrl}
-                        alt={c.name}
-                        fill
-                        className="object-cover"
-                        sizes="64px"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-slate-600 text-xs">
-                        {c.name.charAt(0)}
-                      </div>
-                    )}
-                  </div>
-                  <span className="text-[11px] font-bold text-white line-clamp-1">
-                    {c.name}
-                  </span>
-                  <span className="text-[10px] text-slate-400 line-clamp-1">
-                    {c.character}
-                  </span>
-                </div>
+                <CastAvatarItem key={c.id} member={c} />
               ))}
             </div>
           </div>

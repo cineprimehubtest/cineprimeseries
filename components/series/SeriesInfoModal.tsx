@@ -24,6 +24,37 @@ interface SeriesInfoModalProps {
   onClose: () => void;
 }
 
+const CastItem: React.FC<{ member: any }> = ({ member }) => {
+  const [hasError, setHasError] = React.useState(false);
+
+  return (
+    <div className="flex flex-col items-center text-center w-16 sm:w-20 shrink-0">
+      <div className="relative w-14 sm:w-16 h-18 sm:h-20 rounded-xl overflow-hidden bg-slate-900 border border-white/10 mb-1 flex items-center justify-center">
+        {member.profileUrl && !hasError ? (
+          <Image
+            src={member.profileUrl}
+            alt={member.name}
+            fill
+            className="object-cover"
+            sizes="64px"
+            onError={() => setHasError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-amber-600/30 to-purple-600/30 text-amber-300 font-bold text-sm select-none">
+            {member.name.charAt(0).toUpperCase()}
+          </div>
+        )}
+      </div>
+      <span className="text-[11px] font-bold text-white line-clamp-1 w-full">
+        {member.name}
+      </span>
+      <span className="text-[9px] text-slate-400 line-clamp-1 w-full">
+        {member.character}
+      </span>
+    </div>
+  );
+};
+
 export const SeriesInfoModal: React.FC<SeriesInfoModalProps> = ({
   series,
   isOpen,
@@ -199,32 +230,7 @@ export const SeriesInfoModal: React.FC<SeriesInfoModalProps> = ({
                 </span>
                 <div className="flex gap-2.5 overflow-x-auto pb-1 no-scrollbar">
                   {series.cast.slice(0, 7).map((c) => (
-                    <div
-                      key={c.id}
-                      className="flex flex-col items-center text-center w-16 sm:w-20 shrink-0"
-                    >
-                      <div className="relative w-14 sm:w-16 h-18 sm:h-20 rounded-xl overflow-hidden bg-slate-900 border border-white/10 mb-1">
-                        {c.profileUrl ? (
-                          <Image
-                            src={c.profileUrl}
-                            alt={c.name}
-                            fill
-                            className="object-cover"
-                            sizes="64px"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-slate-600 text-xs">
-                            {c.name.charAt(0)}
-                          </div>
-                        )}
-                      </div>
-                      <span className="text-[11px] font-bold text-white line-clamp-1 w-full">
-                        {c.name}
-                      </span>
-                      <span className="text-[9px] text-slate-400 line-clamp-1 w-full">
-                        {c.character}
-                      </span>
-                    </div>
+                    <CastItem key={c.id} member={c} />
                   ))}
                 </div>
               </div>

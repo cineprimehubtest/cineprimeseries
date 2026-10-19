@@ -65,19 +65,32 @@ function deduplicateSeries(list: Series[]): Series[] {
 
 // Retrieve all series currently published in user's leeched catalogue
 export async function getAllSeries(): Promise<Series[]> {
+  const prioritySlugs = ["heart-beat", "the-court", "loki", "take-charge-of-my-heart", "tyson", "the-ordinary-jackpot", "the-trap"];
+
+  const sortSeries = (list: Series[]) => {
+    return [...list].sort((a, b) => {
+      const idxA = prioritySlugs.indexOf(a.slug);
+      const idxB = prioritySlugs.indexOf(b.slug);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return (b.rating || 0) - (a.rating || 0);
+    });
+  };
+
   try {
     const db = await getDb();
     if (db) {
       const docs = await db.collection<Series>("series").find({}).toArray();
       if (docs && docs.length > 0) {
         const mapped = docs.map((d: any) => ({ ...d, id: d.id || String(d._id) }));
-        return deduplicateSeries(mapped);
+        return sortSeries(deduplicateSeries(mapped));
       }
     }
   } catch (error) {
     console.warn("[SeriesService] Falling back to local catalog:", (error as Error).message);
   }
-  return deduplicateSeries(loadLocalCatalog());
+  return sortSeries(deduplicateSeries(loadLocalCatalog()));
 }
 
 // Find single series by slug

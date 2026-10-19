@@ -76,8 +76,8 @@ async function initMongoDB() {
   try {
     console.log('🔌 Connecting to MongoDB Atlas...');
     mongoClient = new MongoClient(MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000,
-      connectTimeoutMS: 8000,
+      serverSelectionTimeoutMS: 15000,
+      connectTimeoutMS: 15000,
       family: 4, // Force IPv4 to prevent Windows SSL handshake failure
     });
     await mongoClient.connect();
@@ -155,9 +155,12 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
   const yearMatch = name.match(/\b(20[12]\d)\b/);
   const year = yearMatch ? yearMatch[1] : '2026';
 
-  // Clean raw tags for title parsing
+  // Clean raw tags and watermarks from start and end
   let stripped = name
+    .replace(/^(@\w+|https?:\/\/\S+|LiX\s*MoViEs[\s\.]*CoM|1TamilMV[\s\.]*[\w\.]*|Pahe\.in|Team_?HDT|HQ\s*HDRip|DSNP|WEB-?DL|WEBRip|BluRay)[\s\.\-_:]*/gi, '')
     .replace(/[-_ ]*@\w+.*$/g, '')
+    .replace(/\[\s*(ZiroMB|Pahe|MoviesVerse|BollyFlix|VegaMovies|TamilBlasters|Cinemavilla|Kuttymovies|Isaimini|Moviesda|Team_?HDT)[^\]]*\]/gi, '')
+    .replace(/\(\s*(ZiroMB|Pahe|MoviesVerse|BollyFlix|VegaMovies|TamilBlasters)[^\)]*\)/gi, '')
     .replace(/[-+]+$/g, '')
     .replace(/[\(\[]\s*20[12]\d\s*[\)\]]/g, ' ')
     .replace(/\./g, ' ')
@@ -203,10 +206,11 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
     .replace(/\b(20[12]\d)\b/g, '')
     .replace(/\(\s*\)|\[\s*\]/g, ' ')
     .replace(/[-+.]/g, ' ')
+    .replace(/^(@\w+|LiX\s*MoViEs[\s\.]*CoM|1TamilMV[\s\.]*[\w\.]*|Team_?HDT|HDT)[\s\-_:]*/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
 
-  // Normalize specific Indian shows
+  // Normalize specific shows
   if (/heart\s*beat/i.test(name) || /heart\s*beat/i.test(candidateTitle)) {
     candidateTitle = 'Heart Beat';
     seasonNumber = 3;
@@ -225,6 +229,8 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
   } else if (/jackpot|ordinary/i.test(name) || /jackpot|ordinary/i.test(candidateTitle)) {
     candidateTitle = 'The Ordinary Jackpot';
     seasonNumber = 1;
+  } else if (/\bloki\b/i.test(name) || /\bloki\b/i.test(candidateTitle)) {
+    candidateTitle = 'Loki';
   }
 
   // Fallback if uncaptioned or generic Telegram video (e.g. Series_Episode_361)
@@ -264,8 +270,28 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
   };
 }
 
-// Fetch official series metadata from TVmaze
+// Fetch official series metadata
 async function fetchOfficialMetadata(seriesTitle) {
+  if (seriesTitle.toLowerCase() === 'loki') {
+    return {
+      title: 'Loki',
+      overview: 'The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers: Endgame. Traveling across timelines with Agent Mobius and the Time Variance Authority, Loki discovers secrets of the multiverse.',
+      genres: ['Action & Adventure', 'Sci-Fi & Fantasy', 'Drama'],
+      rating: 8.2,
+      posterUrl: '/posters/loki.jpg',
+      backdropUrl: '/posters/loki-backdrop.jpg',
+      premiered: '2021-06-09',
+      trailerVideoId: 'nW948Va-l10',
+      cast: [
+        { id: 61, name: 'Tom Hiddleston', character: 'Loki', profileUrl: '/cast/tom-hiddleston.jpg' },
+        { id: 62, name: 'Owen Wilson', character: 'Mobius M. Mobius', profileUrl: '/cast/owen-wilson.jpg' },
+        { id: 63, name: 'Sophia Di Martino', character: 'Sylvie', profileUrl: '/cast/sophia-di-martino.jpg' },
+        { id: 64, name: 'Wunmi Mosaku', character: 'Hunter B-15', profileUrl: '/cast/wunmi-mosaku.jpg' },
+        { id: 65, name: 'Tara Strong', character: 'Miss Minutes', profileUrl: '/cast/tara-strong.jpg' },
+      ],
+    };
+  }
+
   try {
     const res = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(seriesTitle)}&embed[]=cast&embed[]=images`, {
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CinePrimeSeries/1.0' },
@@ -286,8 +312,8 @@ async function fetchOfficialMetadata(seriesTitle) {
         overview: data.summary ? data.summary.replace(/<[^>]*>?/gm, '') : `Official TV series listing for ${seriesTitle}.`,
         genres: data.genres && data.genres.length > 0 ? data.genres : ['Drama', 'Mystery'],
         rating: data.rating?.average || 8.5,
-        posterUrl: data.image?.original || data.image?.medium || 'https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg',
-        backdropUrl: bg?.resolutions?.original?.url || data.image?.original || 'https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg',
+        posterUrl: data.image?.original || data.image?.medium || '/posters/heart-beat-s3-uhd.png',
+        backdropUrl: bg?.resolutions?.original?.url || data.image?.original || '/posters/heart-beat-s3-backdrop.jpg',
         premiered: data.premiered || '2026-01-01',
         cast,
       };
@@ -301,8 +327,8 @@ async function fetchOfficialMetadata(seriesTitle) {
     overview: `Official seasonal TV series streaming on CinePrimeSeries with confirmed multi-audio tracks.`,
     genres: ['Drama', 'Action'],
     rating: 8.5,
-    posterUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/549/1374918.jpg',
-    backdropUrl: 'https://static.tvmaze.com/uploads/images/original_untouched/549/1374917.jpg',
+    posterUrl: '/posters/heart-beat-s3-uhd.png',
+    backdropUrl: '/posters/heart-beat-s3-backdrop.jpg',
     premiered: '2026-01-01',
     cast: [],
   };
@@ -625,26 +651,23 @@ async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
     console.log(`📤 [Sending File] Copying message #${messageId} from channel ${DB_CHANNEL_ID} to user chat ${userChatId}...`);
 
     function buildDeliveryCaption(record) {
-      if (record && record.caption && record.caption.trim()) {
-        const raw = record.caption.trim();
-        if (raw.includes('Delivered directly by CinePrimeSeries Bot')) {
-          return raw;
-        }
-        return `${raw}\n\n✨ Delivered directly by CinePrimeSeries Bot`;
-      }
-
-      const cleanName = (record?.fileName || 'Series Episode')
-        .replace(/\.(mkv|mp4|avi|webm)$/i, '')
-        .replace(/@CinePrimeHub/gi, '')
-        .replace(/-\s*$/g, '')
+      let cleanName = (record?.fileName || 'Series Episode')
+        .replace(/\.(mkv|mp4|avi|webm|mov)$/i, '')
+        .replace(/@\w+/gi, '')
+        .replace(/\[(1080P|720P|480P|4K|AVC|HEVC|x264|x265)\]/gi, '')
+        .replace(/[-_]+/g, ' ')
+        .replace(/\s+/g, ' ')
         .trim();
+
+      // Ensure no trailing dash or double hub handle
+      cleanName = cleanName.replace(/@CinePrimeHub/gi, '').replace(/-\s*$/g, '').trim();
 
       const titleHeader = `🎬 ${cleanName} - @CinePrimeHub`;
       const quality = record?.quality || '720p';
       const languages = Array.isArray(record?.languages) && record.languages.length > 0
         ? record.languages.join(', ')
-        : 'Tamil, Telugu, Hindi';
-      const size = record?.sizeFormatted || 'Complete File';
+        : 'Tamil, Telugu, Hindi, English';
+      const size = record?.sizeFormatted || 'Standard Web-DL';
 
       return `${titleHeader}\n\n🎞 Quality: ${quality}\n\n🔊 Audio: ${languages}\n💬 Subtitles: English\n\n📦 Size: ${size}\n\n⚡️ @CinePrimeHub\n\n✨ Delivered directly by CinePrimeSeries Bot`;
     }

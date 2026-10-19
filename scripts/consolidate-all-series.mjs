@@ -114,6 +114,11 @@ function parseFileInfo(rawFileName, messageId, fileSize) {
     seriesTitle = 'The Ordinary Jackpot';
     slug = 'the-ordinary-jackpot';
     seasonNumber = 1;
+  } else if (/loki/i.test(cleanName)) {
+    seriesTitle = 'Loki';
+    slug = 'loki';
+    const sMatch = cleanName.match(/\bS0?(\d+)/i);
+    seasonNumber = sMatch ? parseInt(sMatch[1], 10) : 2;
   }
 
   // Combined range: EP (01-04) or EP(45 48)
@@ -320,13 +325,34 @@ const SERIES_METADATA = {
     creators: ['TVING', 'tvN'],
     productionCompanies: ['TVING Original', 'Studio Dragon'],
     cast: [
-      { id: 51, name: 'Lee Jun-hyuk', character: 'Kong Eun-tae', profileUrl: null },
+      { id: 51, name: 'Lee Jun-hyuk', character: 'Kong Eun-tae', profileUrl: '/cast/lee-jun-hyuk.jpg' },
       { id: 52, name: 'Seo Hyun-woo', character: 'Yang Jun-ho', profileUrl: null },
       { id: 53, name: 'Oh Dae-hwan', character: 'Jung Seon-hyuk', profileUrl: null },
       { id: 54, name: 'Baek Ye-in', character: 'Jang Hyang-eun', profileUrl: null },
       { id: 55, name: 'Hong Jin-gi', character: 'Park Ki-tae', profileUrl: null },
       { id: 56, name: 'Ha Yul-ri', character: 'Lee Ji-hye', profileUrl: null },
       { id: 57, name: 'Ok Ja-yeon', character: 'Jin Hae-ju', profileUrl: null },
+    ],
+  },
+  'loki': {
+    title: 'Loki',
+    overview: 'The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of Avengers: Endgame. Traveling across timelines with Agent Mobius and the Time Variance Authority, Loki discovers secrets of the multiverse.',
+    genres: ['Action & Adventure', 'Sci-Fi & Fantasy', 'Drama'],
+    rating: 8.2,
+    posterUrl: '/posters/loki.jpg',
+    backdropUrl: '/posters/loki-backdrop.jpg',
+    firstAirDate: '2021-06-09',
+    seasonNumber: 2,
+    seasonStatusText: 'Season 2 (Completed)',
+    trailerVideoId: 'nW948Va-l10',
+    creators: ['Michael Waldron', 'Marvel Studios'],
+    productionCompanies: ['Marvel Studios', 'Disney+'],
+    cast: [
+      { id: 61, name: 'Tom Hiddleston', character: 'Loki', profileUrl: '/cast/tom-hiddleston.jpg' },
+      { id: 62, name: 'Owen Wilson', character: 'Mobius M. Mobius', profileUrl: '/cast/owen-wilson.jpg' },
+      { id: 63, name: 'Sophia Di Martino', character: 'Sylvie', profileUrl: '/cast/sophia-di-martino.jpg' },
+      { id: 64, name: 'Wunmi Mosaku', character: 'Hunter B-15', profileUrl: '/cast/wunmi-mosaku.jpg' },
+      { id: 65, name: 'Tara Strong', character: 'Miss Minutes', profileUrl: '/cast/tara-strong.jpg' },
     ],
   },
 };

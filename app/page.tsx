@@ -103,6 +103,13 @@ export default async function HomePage() {
                       <Tv size={28} />
                     </div>
                   )}
+                  {/* Badge on top right for total files */}
+                  <div className="absolute top-2.5 right-2.5 z-10">
+                    <span className="px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-bold text-amber-300">
+                      {s.files?.length || s.numberOfEpisodes || 0} Files
+                    </span>
+                  </div>
+
                   {/* Gradient vignette */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                 </div>
@@ -111,14 +118,19 @@ export default async function HomePage() {
                   <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors truncate">
                     {s.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-xs text-slate-400 mt-0.5">
-                    <span>{s.firstAirDate?.substring(0, 4) || "2026"}</span>
-                    {s.rating && (
-                      <span className="flex items-center gap-0.5 text-amber-400 font-bold">
-                        <Star size={11} className="fill-current text-amber-400" />
-                        {s.rating}
-                      </span>
-                    )}
+                  <div className="flex items-center justify-between text-xs text-slate-400 mt-0.5">
+                    <div className="flex items-center gap-2">
+                      <span>{s.firstAirDate?.substring(0, 4) || "2026"}</span>
+                      {s.rating && (
+                        <span className="flex items-center gap-0.5 text-amber-400 font-bold">
+                          <Star size={11} className="fill-current text-amber-400" />
+                          {s.rating}
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[10px] uppercase font-semibold text-slate-500">
+                      {s.status === "Ended" ? "Completed" : "Current"}
+                    </span>
                   </div>
                 </div>
               </Link>

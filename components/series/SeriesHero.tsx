@@ -54,7 +54,7 @@ export const SeriesHero: React.FC<SeriesHeroProps> = ({ seriesList = [] }) => {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative w-full rounded-3xl overflow-hidden bg-[#070911] border border-white/[0.08] shadow-2xl transition-all duration-500 min-h-[440px] md:min-h-[480px] flex items-center group"
+        className="series-hero preserve-dark relative w-full rounded-3xl overflow-hidden bg-[#070911] border border-white/[0.08] shadow-2xl transition-all duration-500 min-h-[440px] md:min-h-[480px] flex items-center group"
       >
         {/* Cinematic Backdrop Image */}
         {series.backdropUrl || series.posterUrl ? (
