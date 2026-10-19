@@ -66,6 +66,35 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
     return sorted.length > 1 ? sorted[0] : "all";
   });
 
+  // Files for currently active season
+  const seasonFiles = useMemo(() => {
+    if (selectedSeason === "all") return files;
+    return files.filter((f) => {
+      const m = f.fileName.match(/S0?(\d+)/i);
+      return m && parseInt(m[1], 10) === selectedSeason;
+    });
+  }, [files, selectedSeason]);
+
+  // Extract all available qualities present in this season (ordered from UHD to SD)
+  const availableQualities = useMemo(() => {
+    const qOrder = ["4K", "1080P", "720P", "480P"];
+    const found = new Set<string>();
+    seasonFiles.forEach((f) => {
+      const fq = (f.quality || "").toUpperCase();
+      const fn = (f.fileName || "").toUpperCase();
+      if (fq.includes("4K") || fq.includes("2160") || fn.includes("4K") || fn.includes("2160")) {
+        found.add("4K");
+      } else if (fq.includes("1080") || fn.includes("1080")) {
+        found.add("1080P");
+      } else if (fq.includes("720") || fn.includes("720")) {
+        found.add("720P");
+      } else if (fq.includes("480") || fn.includes("480")) {
+        found.add("480P");
+      }
+    });
+    return qOrder.filter((q) => found.has(q));
+  }, [seasonFiles]);
+
   // Filter and sort files
   const filteredAndSortedFiles = useMemo(() => {
     let result = files.filter((f) => {
@@ -83,8 +112,25 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
       if (typeFilter === "combined" && !isComb) return false;
       if (typeFilter === "single" && isComb) return false;
 
-      if (qualityFilter !== "all" && f.quality.toUpperCase() !== qualityFilter.toUpperCase()) {
-        return false;
+      if (qualityFilter !== "all") {
+        const qf = qualityFilter.toUpperCase();
+        const fq = (f.quality || "").toUpperCase();
+        const fn = (f.fileName || "").toUpperCase();
+        if (qf === "4K") {
+          const is4K = fq.includes("4K") || fq.includes("2160") || fn.includes("4K") || fn.includes("2160");
+          if (!is4K) return false;
+        } else if (qf === "1080P") {
+          const is1080 = fq.includes("1080") || fn.includes("1080");
+          if (!is1080) return false;
+        } else if (qf === "720P") {
+          const is720 = fq.includes("720") || fn.includes("720");
+          if (!is720) return false;
+        } else if (qf === "480P") {
+          const is480 = fq.includes("480") || fn.includes("480");
+          if (!is480) return false;
+        } else if (!fq.includes(qf) && !fn.includes(qf)) {
+          return false;
+        }
       }
 
       if (searchQuery.trim()) {
@@ -125,15 +171,6 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
     });
   }, [files, selectedSeason, sortOrder, typeFilter, qualityFilter, searchQuery]);
 
-  // Counts for tabs based on current season selection
-  const seasonFiles = useMemo(() => {
-    if (selectedSeason === "all") return files;
-    return files.filter((f) => {
-      const m = f.fileName.match(/S0?(\d+)/i);
-      return m && parseInt(m[1], 10) === selectedSeason;
-    });
-  }, [files, selectedSeason]);
-
   const combinedCount = useMemo(
     () => seasonFiles.filter((f) => f.fileName.toLowerCase().includes("combined") || /ep\s*\(/i.test(f.fileName)).length,
     [seasonFiles]
@@ -144,7 +181,7 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
   );
 
   return (
-    <div className="p-5 sm:p-7 rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur-xl space-y-5">
+    <div id="downloads-section" className="p-5 sm:p-7 rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur-xl space-y-5 scroll-mt-24">
       {/* Top Header & Sort Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-4">
         <div>
@@ -246,7 +283,7 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
           >
             <span>All Releases</span>
             <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${typeFilter === "all" ? "bg-black/20 text-slate-950 font-black" : "bg-white/10 text-slate-400"}`}>
-              {files.filter((f) => !f.fileName.includes("File #")).length}
+              {seasonFiles.filter((f) => !f.fileName.includes("File #")).length}
             </span>
           </button>
 
@@ -282,21 +319,46 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
         </div>
 
         {/* Quality Filter Pills */}
-        <div className="flex items-center gap-1.5">
-          <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider hidden sm:inline">Quality:</span>
-          {["all", "1080P", "720P", "480P"].map((q) => (
-            <button
-              key={q}
-              onClick={() => setQualityFilter(q)}
-              className={`px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase transition-all cursor-pointer ${
-                qualityFilter === q
-                  ? "bg-amber-400/20 border border-amber-400 text-amber-300"
-                  : "bg-white/5 hover:bg-white/10 text-slate-400 border border-white/5"
-              }`}
-            >
-              {q === "all" ? "All Qualities" : q}
-            </button>
-          ))}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider hidden sm:inline">Quality:</span>
+          <button
+            onClick={() => setQualityFilter("all")}
+            className={`px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase transition-all cursor-pointer ${
+              qualityFilter === "all"
+                ? "bg-amber-400/20 border border-amber-400 text-amber-300 shadow-sm"
+                : "bg-white/5 hover:bg-white/10 text-slate-400 border border-white/5"
+            }`}
+          >
+            All Qualities
+          </button>
+          {availableQualities.map((q) => {
+            const count = seasonFiles.filter((f) => {
+              const fq = (f.quality || "").toUpperCase();
+              const fn = (f.fileName || "").toUpperCase();
+              if (q === "4K") return fq.includes("4K") || fq.includes("2160") || fn.includes("4K") || fn.includes("2160");
+              if (q === "1080P") return fq.includes("1080") || fn.includes("1080");
+              if (q === "720P") return fq.includes("720") || fn.includes("720");
+              if (q === "480P") return fq.includes("480") || fn.includes("480");
+              return fq === q;
+            }).length;
+
+            return (
+              <button
+                key={q}
+                onClick={() => setQualityFilter(q)}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase transition-all cursor-pointer ${
+                  qualityFilter === q
+                    ? "bg-amber-400/20 border border-amber-400 text-amber-300 shadow-sm"
+                    : "bg-white/5 hover:bg-white/10 text-slate-400 border border-white/5"
+                }`}
+              >
+                <span>{q}</span>
+                <span className="text-[9px] px-1 py-0.2 rounded-full bg-black/30 text-amber-200">
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Search input inside file section */}

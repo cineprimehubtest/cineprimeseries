@@ -170,8 +170,15 @@ export const SeriesInfoModal: React.FC<SeriesInfoModalProps> = ({
                       series.status === "Canceled" ||
                       series.slug === "stranger-things" ||
                       series.slug === "loki";
-                    const seasonNum = series.currentSeasonNumber || series.numberOfSeasons || 1;
-                    const label = series.seasonStatusText || (isCompleted ? `Season ${seasonNum} (Completed)` : `Season ${seasonNum} (Current Season)`);
+                    const seasonCount = series.numberOfSeasons || 1;
+                    const seasonNum = series.currentSeasonNumber || seasonCount;
+                    const label =
+                      series.seasonStatusText ||
+                      (seasonCount > 1
+                        ? `Seasons 1-${seasonCount} (Complete)`
+                        : isCompleted
+                        ? `Season ${seasonNum} (Completed)`
+                        : `Season ${seasonNum} (Current Season)`);
 
                     return (
                       <span

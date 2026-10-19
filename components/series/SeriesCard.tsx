@@ -61,7 +61,12 @@ export const SeriesCard: React.FC<SeriesCardProps> = ({ series, priority = false
               </Badge>
             ) : <span />}
 
-            <div className="flex gap-1">
+            <div className="flex items-center gap-1">
+              {series.numberOfSeasons && series.numberOfSeasons > 1 && (
+                <span className="px-2 py-0.5 rounded-full bg-amber-500/20 backdrop-blur-md text-[10px] text-amber-300 border border-amber-500/40 font-bold">
+                  S01-S0{series.numberOfSeasons}
+                </span>
+              )}
               {isTamilAvailable && (
                 <Badge variant="cyan" size="sm" className="backdrop-blur-md">
                   Tamil

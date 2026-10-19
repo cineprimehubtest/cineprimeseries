@@ -16,6 +16,7 @@ import {
   Tv,
   ChevronLeft,
   ShieldCheck,
+  Layers,
 } from "lucide-react";
 import { SeriesDetailClient } from "./SeriesDetailClient";
 
@@ -66,6 +67,18 @@ export default async function SeriesDetailPage({ params }: PageProps) {
   }
 
   const releaseYear = series.firstAirDate ? series.firstAirDate.substring(0, 4) : "TBA";
+
+  // Extract all available seasons from files or metadata
+  const sSet = new Set<number>();
+  (series.files || []).forEach((f) => {
+    const match = f.fileName.match(/S0?(\d+)/i);
+    if (match) sSet.add(parseInt(match[1], 10));
+  });
+  if (sSet.size === 0 && series.numberOfSeasons) {
+    for (let i = 1; i <= series.numberOfSeasons; i++) sSet.add(i);
+  }
+  const availableSeasonNumbers = Array.from(sSet).sort((a, b) => a - b);
+  const hasMultipleSeasons = availableSeasonNumbers.length > 1;
 
   // Schema.org Structured Data
   const jsonLd = {
@@ -168,9 +181,16 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                     Tamil Audio Confirmed
                   </Badge>
                 )}
-                <span className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 font-medium">
-                  {series.numberOfSeasons} {series.numberOfSeasons === 1 ? "Season" : "Seasons"}
-                </span>
+                {hasMultipleSeasons ? (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-amber-500/10 border border-amber-500/40 text-amber-300 text-xs font-bold shadow-sm">
+                    <Layers size={13} className="text-amber-400" />
+                    <span>All {availableSeasonNumbers.length} Seasons Available (Season {availableSeasonNumbers.join(" & ")})</span>
+                  </span>
+                ) : (
+                  <span className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 font-medium">
+                    {series.numberOfSeasons || 1} Season
+                  </span>
+                )}
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
@@ -202,6 +222,37 @@ export default async function SeriesDetailPage({ params }: PageProps) {
                   ))}
                 </div>
               </div>
+
+              {/* Quick Season Navigation & Count Pills */}
+              {hasMultipleSeasons && (
+                <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-white/10">
+                  <span className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <Layers size={13} />
+                    <span>Available Seasons:</span>
+                  </span>
+                  {availableSeasonNumbers.map((sNum) => {
+                    const count = (series.files || []).filter((f) => {
+                      const m = f.fileName.match(/S0?(\d+)/i);
+                      return m && parseInt(m[1], 10) === sNum;
+                    }).length;
+                    return (
+                      <a
+                        key={sNum}
+                        href="#downloads-section"
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 text-xs font-bold transition-all shadow-sm active:scale-95"
+                      >
+                        <span>Season {sNum}</span>
+                        <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-black/40 text-amber-200">
+                          {count} Files
+                        </span>
+                      </a>
+                    );
+                  })}
+                  <span className="text-xs text-slate-400">
+                    ({series.files?.length || 0} Total Releases)
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

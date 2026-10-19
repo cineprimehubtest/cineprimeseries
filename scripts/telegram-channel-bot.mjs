@@ -495,11 +495,21 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize, rawCaption
     // Always keep files sorted from Latest to 1st (Combined 1080p, 720p, 480p, then single episodes E48..E01)
     series.files = sortFilesLatestFirst(series.files);
 
-    // Update series season and episode count
+    // Update series season and episode count dynamically
     series.numberOfEpisodes = series.files.length;
-    if (parsed.seasonNumber) {
-      series.currentSeasonNumber = parsed.seasonNumber;
-      series.seasonStatusText = `Season ${parsed.seasonNumber} (Current Season)`;
+    const detectedSeasons = new Set();
+    for (const f of series.files) {
+      const match = f.fileName.match(/S0?(\d+)/i);
+      if (match) detectedSeasons.add(parseInt(match[1], 10));
+    }
+    if (parsed.seasonNumber) detectedSeasons.add(parsed.seasonNumber);
+    const maxSeason = detectedSeasons.size > 0 ? Math.max(...detectedSeasons) : (parsed.seasonNumber || 1);
+    series.numberOfSeasons = Math.max(series.numberOfSeasons || 1, maxSeason, detectedSeasons.size);
+    series.currentSeasonNumber = parsed.seasonNumber || maxSeason;
+    if (detectedSeasons.size > 1) {
+      series.seasonStatusText = `Seasons 1-${maxSeason} (${series.status === 'Ended' ? 'Complete' : 'Available'})`;
+    } else {
+      series.seasonStatusText = `Season ${maxSeason} (${series.status === 'Ended' ? 'Completed' : 'Current Season'})`;
     }
 
     // 1. Save updated catalog to disk

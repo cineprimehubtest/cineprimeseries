@@ -106,7 +106,9 @@ export default async function HomePage() {
                   {/* Badge on top right for total files */}
                   <div className="absolute top-2.5 right-2.5 z-10">
                     <span className="px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-bold text-amber-300">
-                      {s.files?.length || s.numberOfEpisodes || 0} Files
+                      {s.numberOfSeasons && s.numberOfSeasons > 1
+                        ? `Seasons 1-${s.numberOfSeasons} (${s.files?.length || 0})`
+                        : `${s.files?.length || s.numberOfEpisodes || 0} Files`}
                     </span>
                   </div>
 
