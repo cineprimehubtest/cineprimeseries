@@ -145,8 +145,16 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
     quality = fileSize >= 320 * 1024 * 1024 ? '720P' : '480P';
   }
 
+  // Parse Source
+  let source = 'WEB-DL';
+  if (/bluray|blu-ray/i.test(name)) source = 'BluRay';
+  else if (/hdrip|hd-rip/i.test(name)) source = 'HDRip';
+  else if (/webrip|web-rip/i.test(name)) source = 'WEBRip';
+  else if (/web-?dl|dsnp|amzn|nf|hotstar|hulu/i.test(name)) source = 'WEB-DL';
+  else if (/hdtv|tvrip/i.test(name)) source = 'HDTV';
+
   // Parse Codec
-  let codec = 'AVC';
+  let codec = 'x264';
   if (/hevc|x265|h\.?265/i.test(name)) codec = 'HEVC';
   else if (/x264|h\.?264/i.test(name)) codec = 'x264';
   else if (/avc/i.test(name)) codec = 'AVC';
@@ -164,7 +172,7 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
 
   // Parse Year
   const yearMatch = name.match(/\b(20[12]\d)\b/);
-  const year = yearMatch ? yearMatch[1] : '2026';
+  const rawYear = yearMatch ? yearMatch[1] : null;
 
   // Clean raw tags and watermarks from start and end
   let stripped = name
@@ -251,18 +259,31 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
     if (activeSeries?.currentSeasonNumber) seasonNumber = activeSeries.currentSeasonNumber;
   }
 
-  // Build clean, beautiful file name
+  // Resolve release year
+  let resolvedYear = rawYear;
+  if (!resolvedYear) {
+    if (candidateTitle.toLowerCase() === 'loki') resolvedYear = '2021';
+    else if (candidateTitle.toLowerCase() === 'heart beat') resolvedYear = '2024';
+    else if (candidateTitle.toLowerCase() === 'the court') resolvedYear = '2024';
+    else if (activeSeries?.premiered) resolvedYear = activeSeries.premiered.slice(0, 4);
+    else resolvedYear = '2024';
+  }
+
+  // Standard quality presentation: '4K', '1080p', '720p', '480p'
+  const displayQuality = quality === '4K' ? '4K' : quality.toLowerCase();
+  const seasonStr = seasonNumber < 10 ? `S0${seasonNumber}` : `S${seasonNumber}`;
+  const epStr = episodeNumber != null ? (episodeNumber < 10 ? `E0${episodeNumber}` : `E${episodeNumber}`) : '';
+
+  // Build clean standardized file name: {title} ({year}) {season}{episode} {quality} {source} {codec} - @CinePrimeHub.mkv
   let cleanFileName = '';
   if (isCombined) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber} EP (${combinedRange}) Combined ${quality}.mkv`;
-  } else if (episodeNumber && episodeTitle) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber} ${episodeTitle} [${quality}].mkv`;
-  } else if (episodeNumber) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber} [${quality}].mkv`;
+    cleanFileName = `${candidateTitle} (${resolvedYear}) ${seasonStr} EP(${combinedRange}) ${displayQuality} ${source} ${codec} - @CinePrimeHub.mkv`;
+  } else if (epStr) {
+    cleanFileName = `${candidateTitle} (${resolvedYear}) ${seasonStr}${epStr} ${displayQuality} ${source} ${codec} - @CinePrimeHub.mkv`;
   } else if (isGeneric) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber} Episode (File #${messageId}) [${quality}].mkv`;
+    cleanFileName = `${candidateTitle} (${resolvedYear}) ${seasonStr} Episode (File #${messageId}) ${displayQuality} ${source} ${codec} - @CinePrimeHub.mkv`;
   } else {
-    cleanFileName = `${candidateTitle} S0${seasonNumber} ${quality}.mkv`;
+    cleanFileName = `${candidateTitle} (${resolvedYear}) ${seasonStr} ${displayQuality} ${source} ${codec} - @CinePrimeHub.mkv`;
   }
 
   const slug = candidateTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -276,8 +297,9 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
     cleanFileName,
     quality,
     codec,
+    source,
     languages,
-    year,
+    year: resolvedYear,
   };
 }
 
