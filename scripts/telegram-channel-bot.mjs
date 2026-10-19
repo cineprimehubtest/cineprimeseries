@@ -117,17 +117,22 @@ function formatFileSize(bytes) {
 }
 
 // Clean series title and release metadata from file name
-function parseFileInfo(rawFileName, messageId, activeSeries = null) {
+function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0) {
   let name = (rawFileName || '')
     .replace(/\.(mkv|mp4|avi|webm|mov)$/i, '')
     .replace(/_/g, ' ');
 
-  // Parse Quality
+  // Parse Quality (Check filename tags first, fallback to byte size)
   let quality = '1080P';
-  if (/2160p|4k/i.test(name)) quality = '4K';
-  else if (/1080p|1080/i.test(name)) quality = '1080P';
-  else if (/720p|720/i.test(name)) quality = '720P';
-  else if (/480p|480/i.test(name)) quality = '480P';
+  if (/2160p|4k\b|uhd/i.test(name)) quality = '4K';
+  else if (/1080p|1080\b|fhd/i.test(name)) quality = '1080P';
+  else if (/720p|720\b|hd\b/i.test(name)) quality = '720P';
+  else if (/480p|480\b|sd\b/i.test(name)) quality = '480P';
+  else if (fileSize > 0) {
+    if (fileSize >= 550 * 1024 * 1024) quality = '1080P';
+    else if (fileSize >= 320 * 1024 * 1024) quality = '720P';
+    else quality = '480P';
+  }
 
   // Parse Codec
   let codec = 'AVC';
@@ -159,7 +164,7 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null) {
     .trim();
 
   // Extract Season and Episode information
-  let seasonNumber = 3;
+  let seasonNumber = 1;
   let episodeNumber = null;
   let episodeTitle = '';
   let candidateTitle = '';
@@ -204,12 +209,29 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null) {
   // Normalize specific Indian shows
   if (/heart\s*beat/i.test(name) || /heart\s*beat/i.test(candidateTitle)) {
     candidateTitle = 'Heart Beat';
+    seasonNumber = 3;
+  } else if (/the\s*court|court/i.test(name) || /the\s*court|court/i.test(candidateTitle)) {
+    candidateTitle = 'The Court';
+    seasonNumber = 1;
+  } else if (/take\s*charge/i.test(name) || /take\s*charge/i.test(candidateTitle)) {
+    candidateTitle = 'Take Charge of My Heart';
+    seasonNumber = 1;
+  } else if (/tyson/i.test(name) || /tyson/i.test(candidateTitle)) {
+    candidateTitle = 'Tyson';
+    seasonNumber = 1;
+  } else if (/the\s*trap|trap/i.test(name) || /the\s*trap|trap/i.test(candidateTitle)) {
+    candidateTitle = 'The Trap';
+    seasonNumber = 1;
+  } else if (/jackpot|ordinary/i.test(name) || /jackpot|ordinary/i.test(candidateTitle)) {
+    candidateTitle = 'The Ordinary Jackpot';
+    seasonNumber = 1;
   }
 
   // Fallback if uncaptioned or generic Telegram video (e.g. Series_Episode_361)
   const isGeneric = !candidateTitle || candidateTitle.toLowerCase().startsWith('series episode') || candidateTitle.toLowerCase().trim() === 'series' || candidateTitle.length < 2;
   if (isGeneric) {
     candidateTitle = activeSeries ? activeSeries.title : 'Heart Beat';
+    if (activeSeries?.currentSeasonNumber) seasonNumber = activeSeries.currentSeasonNumber;
   }
 
   // Build clean, beautiful file name
@@ -217,11 +239,11 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null) {
   if (isCombined) {
     cleanFileName = `${candidateTitle} S0${seasonNumber} EP (${combinedRange}) Combined ${quality}.mkv`;
   } else if (episodeNumber && episodeTitle) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber} ${episodeTitle}.mkv`;
+    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber} ${episodeTitle} [${quality}].mkv`;
   } else if (episodeNumber) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber}.mkv`;
+    cleanFileName = `${candidateTitle} S0${seasonNumber}E${episodeNumber < 10 ? '0' + episodeNumber : episodeNumber} [${quality}].mkv`;
   } else if (isGeneric) {
-    cleanFileName = `${candidateTitle} S0${seasonNumber} Episode (File #${messageId}).mkv`;
+    cleanFileName = `${candidateTitle} S0${seasonNumber} Episode (File #${messageId}) [${quality}].mkv`;
   } else {
     cleanFileName = `${candidateTitle} S0${seasonNumber} ${quality}.mkv`;
   }
@@ -287,16 +309,17 @@ async function fetchOfficialMetadata(seriesTitle) {
 }
 
 function getBatchInfo(file) {
-  const name = file.fileName;
+  const name = file.fileName || '';
+  const qRank = file.quality === '4K' ? 4 : file.quality === '1080P' ? 3 : file.quality === '720P' ? 2 : 1;
+
   const combMatch = name.match(/EP\s*\(\s*(\d+)\s*[- ]\s*(\d+)\s*\)/i);
   if (combMatch) {
     const endEp = parseInt(combMatch[2], 10);
-    const qRank = file.quality === '1080P' ? 3 : file.quality === '720P' ? 2 : 1;
     return {
       batchNum: endEp,
       isCombined: true,
       epNum: endEp,
-      subRank: 10 + qRank,
+      subRank: 1000 + qRank,
     };
   }
   const epMatch = name.match(/S\d+E(\d+)/i);
@@ -307,10 +330,10 @@ function getBatchInfo(file) {
       batchNum,
       isCombined: false,
       epNum,
-      subRank: epNum,
+      subRank: epNum * 10 + qRank,
     };
   }
-  return { batchNum: 0, isCombined: false, epNum: 0, subRank: 0 };
+  return { batchNum: 0, isCombined: false, epNum: 0, subRank: qRank };
 }
 
 function sortFilesLatestFirst(list) {
@@ -327,7 +350,7 @@ function sortFilesLatestFirst(list) {
 }
 
 // Index a file into catalog.json and MongoDB - STRICTLY GROUPS FILES INTO 1 SERIES
-async function indexFileFromChannel(messageId, rawFileName, fileSize) {
+async function indexFileFromChannel(messageId, rawFileName, fileSize, rawCaption = '') {
   try {
     const sizeFormatted = formatFileSize(fileSize);
 
@@ -340,8 +363,8 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
     // Determine currently active series (e.g. Heart Beat)
     let activeSeries = catalog.find((s) => s.slug === lastActiveSeriesSlug) || catalog[0] || null;
 
-    // Parse the incoming file information
-    const parsed = parseFileInfo(rawFileName, messageId, activeSeries);
+    // Parse the incoming file information with fileSize
+    const parsed = parseFileInfo(rawFileName, messageId, activeSeries, fileSize);
 
     // Match existing series by:
     // 1. Exact slug match
@@ -375,9 +398,9 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
         genres: meta.genres,
         firstAirDate: meta.premiered,
         status: 'Returning Series',
-        numberOfSeasons: parsed.seasonNumber || 3,
-        currentSeasonNumber: parsed.seasonNumber || 3,
-        seasonStatusText: `Season ${parsed.seasonNumber || 3} (Current Season)`,
+        numberOfSeasons: parsed.seasonNumber || 1,
+        currentSeasonNumber: parsed.seasonNumber || 1,
+        seasonStatusText: `Season ${parsed.seasonNumber || 1} (Current Season)`,
         numberOfEpisodes: 1,
         rating: meta.rating,
         voteCount: 3500,
@@ -397,8 +420,8 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
         files: [],
         seasons: [
           {
-            seasonNumber: parsed.seasonNumber || 3,
-            title: `Season ${parsed.seasonNumber || 3}`,
+            seasonNumber: parsed.seasonNumber || 1,
+            title: `Season ${parsed.seasonNumber || 1}`,
             episodeCount: 1,
             posterUrl: meta.posterUrl,
           },
@@ -409,10 +432,10 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
 
     lastActiveSeriesSlug = series.slug;
 
-    // Add or update file item in series.files
+    // Add or update file item in series.files - strictly by messageId / id
     const fileId = `tg-${messageId}`;
     const fileIndex = (series.files || []).findIndex(
-      (f) => f.id === fileId || f.channelMessageId === messageId || f.fileName === parsed.cleanFileName
+      (f) => f.id === fileId || f.channelMessageId === messageId
     );
 
     const fileItem = {
@@ -433,6 +456,7 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize) {
       telegramUrl: botDeepLink,
       channelMessageId: messageId,
       dbChannelId: DB_CHANNEL_ID,
+      caption: rawCaption ? rawCaption.trim() : undefined,
     };
 
     if (fileIndex !== -1) {
@@ -600,14 +624,32 @@ async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
   try {
     console.log(`📤 [Sending File] Copying message #${messageId} from channel ${DB_CHANNEL_ID} to user chat ${userChatId}...`);
 
-    const caption = fileRecord
-      ? `🎬 <b>${fileRecord.fileName}</b>\n\n` +
-        `🌟 <b>Quality:</b> ${fileRecord.quality}  |  <b>Codec:</b> ${fileRecord.codec}\n` +
-        `📦 <b>Size:</b> ${fileRecord.sizeFormatted || 'Complete Episode'}\n` +
-        `🔊 <b>Audio:</b> ${(fileRecord.languages || ['Tamil', 'Multi-Audio']).join(', ')}\n\n` +
-        `✨ <i>Delivered directly by CinePrimeSeries Bot</i>\n` +
-        `🌐 Visit Website: http://localhost:3000`
-      : `🎬 <b>Here is your requested series file!</b>\n\n✨ <i>Powered by CinePrimeSeries</i>`;
+    function buildDeliveryCaption(record) {
+      if (record && record.caption && record.caption.trim()) {
+        const raw = record.caption.trim();
+        if (raw.includes('Delivered directly by CinePrimeSeries Bot')) {
+          return raw;
+        }
+        return `${raw}\n\n✨ Delivered directly by CinePrimeSeries Bot`;
+      }
+
+      const cleanName = (record?.fileName || 'Series Episode')
+        .replace(/\.(mkv|mp4|avi|webm)$/i, '')
+        .replace(/@CinePrimeHub/gi, '')
+        .replace(/-\s*$/g, '')
+        .trim();
+
+      const titleHeader = `🎬 ${cleanName} - @CinePrimeHub`;
+      const quality = record?.quality || '720p';
+      const languages = Array.isArray(record?.languages) && record.languages.length > 0
+        ? record.languages.join(', ')
+        : 'Tamil, Telugu, Hindi';
+      const size = record?.sizeFormatted || 'Complete File';
+
+      return `${titleHeader}\n\n🎞 Quality: ${quality}\n\n🔊 Audio: ${languages}\n💬 Subtitles: English\n\n📦 Size: ${size}\n\n⚡️ @CinePrimeHub\n\n✨ Delivered directly by CinePrimeSeries Bot`;
+    }
+
+    const caption = buildDeliveryCaption(fileRecord);
 
     const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/copyMessage`, {
       method: 'POST',
@@ -621,7 +663,7 @@ async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
         reply_markup: {
           inline_keyboard: [
             [
-              { text: '🌐 Open CinePrimeSeries Website', url: 'http://localhost:3000' },
+              { text: '🌐 Open CinePrimeSeries Website', url: 'https://cineprimeseries.vercel.app' },
               { text: '📢 Telegram Channel', url: 'https://t.me/CinePrimeSeries' },
             ],
           ],
@@ -641,14 +683,14 @@ async function copyFileToUserChat(userChatId, messageId, fileRecord = null) {
         await removeDeletedMessageFromDatabase(messageId);
         await sendTelegramMessage(
           userChatId,
-          `⚠️ <b>File Unavailable:</b>\n\nMessage #${messageId} was deleted or removed from the database channel.\n\nPlease choose from the active episodes on the website:\n🌐 http://localhost:3000/series/heart-beat`
+          `⚠️ <b>File Unavailable:</b>\n\nMessage #${messageId} was deleted or removed from the database channel.\n\nPlease choose from the active episodes on the website:\n🌐 https://cineprimeseries.vercel.app`
         );
         return false;
       }
 
       await sendTelegramMessage(
         userChatId,
-        `⚠️ <b>File Retrieval Notice:</b>\n\nMessage #${messageId} could not be copied directly.\nPlease verify the file exists in database channel: <code>${DB_CHANNEL_ID}</code>.\n\n🌐 Visit website: http://localhost:3000`
+        `⚠️ <b>File Retrieval Notice:</b>\n\nMessage #${messageId} could not be copied directly.\nPlease verify the file exists in database channel: <code>${DB_CHANNEL_ID}</code>.\n\n🌐 Visit website: https://cineprimeseries.vercel.app`
       );
       return false;
     }
@@ -666,7 +708,7 @@ async function startBotDaemon() {
   console.log('🤖 CINEPRIMESERIES TELEGRAM FILE STORE & AUTO-INDEXER BOT');
   console.log(`📡 Database Channel ID  : ${DB_CHANNEL_ID}`);
   console.log(`🤖 Bot Username        : @${BOT_USERNAME}`);
-  console.log(`🌐 Website URL         : http://localhost:3000`);
+  console.log(`🌐 Website URL         : https://cineprimeseries.vercel.app`);
   console.log(`🍃 MongoDB Database    : ${MONGODB_DATABASE}`);
   console.log('================================================================\n');
 
@@ -749,7 +791,7 @@ async function startBotDaemon() {
               console.log(`   File Size  : ${formatFileSize(fileSize)}`);
 
               // Auto-index into MongoDB & catalog.json (strictly grouped into canonical series)
-              await indexFileFromChannel(channelPost.message_id, fileName, fileSize);
+              await indexFileFromChannel(channelPost.message_id, fileName, fileSize, channelPost.caption || '');
             }
           }
 
@@ -768,11 +810,6 @@ async function startBotDaemon() {
 
               if (payload) {
                 console.log(`🎯 [File Request Detected] Payload: "${payload}"`);
-
-                await sendTelegramMessage(
-                  userChatId,
-                  `🔍 <b>Searching CinePrimeSeries Database...</b>\n\nFetching your requested series file. Please wait a moment...`
-                );
 
                 const fileRecord = await findFileByPayload(payload);
                 let messageId = null;
@@ -793,7 +830,7 @@ async function startBotDaemon() {
                       `🌟 Quality: ${fileRecord?.quality || '1080P'} | Codec: ${fileRecord?.codec || 'AVC'}\n` +
                       `📦 Size: ${fileRecord?.sizeFormatted || 'Standard Web-DL'}\n\n` +
                       `⚠️ <i>To receive this specific episode via instant copy, forward the file into the Database Channel (-1004461514415). It will be indexed automatically!</i>\n\n` +
-                      `🌐 Website: http://localhost:3000`
+                      `🌐 Website: https://cineprimeseries.vercel.app`
                   );
                 }
               } else {
@@ -803,13 +840,13 @@ async function startBotDaemon() {
                   `👋 <b>Hello ${userName}! Welcome to CinePrimeSeries!</b>\n\n` +
                     `🎬 <b>Strictly TV & Web Series Only!</b>\n` +
                     `Browse thousands of episodes, confirmed Tamil audio, and official trailers on our website:\n\n` +
-                    `🌐 <b>Website:</b> http://localhost:3000\n` +
+                    `🌐 <b>Website:</b> https://cineprimeseries.vercel.app\n` +
                     `📢 <b>Channel:</b> https://t.me/CinePrimeSeries\n\n` +
                     `<i>To get any file, simply click "Get File in Telegram Bot" on the website, and I will deliver the file directly into this chat!</i>`,
                   {
                     inline_keyboard: [
                       [
-                        { text: '🌐 Open CinePrimeSeries Website', url: 'http://localhost:3000' },
+                        { text: '🌐 Open CinePrimeSeries Website', url: 'https://cineprimeseries.vercel.app' },
                         { text: '📢 Official Channel', url: 'https://t.me/CinePrimeSeries' },
                       ],
                     ],

@@ -6,7 +6,9 @@ import { SeriesHero } from "@/components/series/SeriesHero";
 import { getAllSeries } from "@/lib/seriesService";
 import { Star, Tv, ChevronRight, Radio } from "lucide-react";
 
-export const revalidate = 600; // revalidate every 10 mins
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 
 export default async function HomePage() {
   const all = await getAllSeries();

@@ -47,3 +47,9 @@ next-env.d.ts
 # OS files
 .DS_Store
 Thumbs.db
+
+# Temp scratch files
+scripts/*.html
+scripts/chrome_imdb.html
+scripts/imdb_media.html
+scripts/hotstar-page.html
