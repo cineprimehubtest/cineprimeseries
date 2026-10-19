@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { LeechedFileItem, CastMember } from "@/types";
 import { Modal } from "@/components/ui/Modal";
-import { Star, Send, Share2, FileText, Tv, ExternalLink } from "lucide-react";
+import { Star, Send, Share2, FileText, Tv, ExternalLink, X } from "lucide-react";
 import { useToast } from "@/components/ui/Toast";
 
 interface FileDetailModalProps {
@@ -18,27 +18,27 @@ const CastAvatarItem: React.FC<{ member: CastMember }> = ({ member }) => {
   const [hasError, setHasError] = React.useState(false);
 
   return (
-    <div className="flex flex-col items-center text-center w-20 shrink-0">
-      <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gradient-to-tr from-slate-900 to-slate-800 border-2 border-white/15 shadow-md mb-1.5 flex items-center justify-center">
+    <div className="flex flex-col items-center text-center w-16 sm:w-20 shrink-0">
+      <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden bg-gradient-to-tr from-slate-900 to-slate-800 border-2 border-amber-500/30 shadow-md mb-1.5 flex items-center justify-center">
         {member.profileUrl && !hasError ? (
           <Image
             src={member.profileUrl}
             alt={member.name}
             fill
             className="object-cover"
-            sizes="64px"
+            sizes="56px"
             onError={() => setHasError(true)}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-amber-600/30 to-purple-600/30 text-amber-300 font-bold text-base select-none">
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-amber-500/20 to-purple-600/30 text-amber-300 font-bold text-sm select-none">
             {member.name.charAt(0).toUpperCase()}
           </div>
         )}
       </div>
-      <span className="text-[11px] font-bold text-white line-clamp-1">
+      <span className="text-[11px] font-bold text-white line-clamp-1 w-full">
         {member.name}
       </span>
-      <span className="text-[10px] text-slate-400 line-clamp-1">
+      <span className="text-[10px] text-slate-400 line-clamp-1 w-full">
         {member.character}
       </span>
     </div>
@@ -69,9 +69,9 @@ export const FileDetailModal: React.FC<FileDetailModalProps> = ({
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="xl">
-      <div className="space-y-6 -mt-2">
+      <div className="space-y-4 -mt-2">
         {/* Header Banner & Poster */}
-        <div className="relative -mx-4 md:-mx-6 -mt-4 md:-mt-6 h-48 sm:h-60 overflow-hidden bg-slate-950">
+        <div className="relative -mx-4 md:-mx-6 -mt-4 md:-mt-6 h-36 sm:h-44 overflow-hidden bg-slate-950">
           {file.backdropUrl || file.posterUrl ? (
             <Image
               src={file.backdropUrl || file.posterUrl!}
@@ -81,11 +81,20 @@ export const FileDetailModal: React.FC<FileDetailModalProps> = ({
               sizes="(max-width: 1024px) 100vw, 800px"
             />
           ) : null}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080b14] via-[#080b14]/70 to-transparent" />
+
+          {/* Floating Close Button */}
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute top-3 right-3 p-2 rounded-full bg-black/60 hover:bg-black/80 text-white/90 hover:text-white border border-white/10 backdrop-blur-md transition-colors z-30 cursor-pointer"
+          >
+            <X size={15} />
+          </button>
 
           {/* Poster and Title overlay */}
-          <div className="absolute bottom-4 inset-x-4 md:inset-x-6 flex items-end gap-4">
-            <div className="relative w-24 sm:w-28 aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-900 shrink-0 hidden sm:block">
+          <div className="absolute bottom-3 inset-x-4 md:inset-x-6 flex items-end gap-3.5">
+            <div className="relative w-18 sm:w-22 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-900 shrink-0 hidden sm:block">
               {file.posterUrl ? (
                 <Image
                   src={file.posterUrl}

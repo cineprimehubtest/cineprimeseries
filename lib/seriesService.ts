@@ -95,18 +95,24 @@ export async function getAllSeries(): Promise<Series[]> {
 
 // Find single series by slug
 export async function getSeriesBySlug(slug: string): Promise<Series | null> {
-  const cleanSlug = slug.toLowerCase().trim();
+  const cleanSlug = slug.toLowerCase().trim().replace(/_/g, '-');
+  const rawSlug = slug.toLowerCase().trim();
+
   try {
     const db = await getDb();
     if (db) {
-      const doc = await db.collection<Series>("series").findOne({ slug: cleanSlug });
+      const doc = await db.collection<Series>("series").findOne({
+        $or: [{ slug: cleanSlug }, { slug: rawSlug }, { slug: rawSlug.replace(/-/g, '_') }]
+      });
       if (doc) return { ...doc, id: doc.id || String(doc._id) };
     }
   } catch (err) {
     console.warn("[SeriesService] DB lookup error:", (err as Error).message);
   }
 
-  const found = loadLocalCatalog().find((s) => s.slug === cleanSlug);
+  const found = loadLocalCatalog().find(
+    (s) => s.slug === cleanSlug || s.slug === rawSlug || s.slug.replace(/_/g, '-') === cleanSlug
+  );
   return found || null;
 }
 

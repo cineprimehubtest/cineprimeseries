@@ -45,11 +45,39 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
   const [qualityFilter, setQualityFilter] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
+  // Extract all available seasons in these files
+  const availableSeasons = useMemo(() => {
+    const sSet = new Set<number>();
+    files.forEach((f) => {
+      const match = f.fileName.match(/S0?(\d+)/i);
+      if (match) sSet.add(parseInt(match[1], 10));
+    });
+    return Array.from(sSet).sort((a, b) => b - a);
+  }, [files]);
+
+  // Selected season: defaults to latest season if multiple seasons exist
+  const [selectedSeason, setSelectedSeason] = useState<number | "all">(() => {
+    const sSet = new Set<number>();
+    files.forEach((f) => {
+      const match = f.fileName.match(/S0?(\d+)/i);
+      if (match) sSet.add(parseInt(match[1], 10));
+    });
+    const sorted = Array.from(sSet).sort((a, b) => b - a);
+    return sorted.length > 1 ? sorted[0] : "all";
+  });
+
   // Filter and sort files
   const filteredAndSortedFiles = useMemo(() => {
     let result = files.filter((f) => {
       // Ignore stickers or non-files
       if (f.fileName.includes("File #") || f.fileName === "👇") return false;
+
+      // Filter by season
+      if (selectedSeason !== "all") {
+        const match = f.fileName.match(/S0?(\d+)/i);
+        const sNum = match ? parseInt(match[1], 10) : 1;
+        if (sNum !== selectedSeason) return false;
+      }
 
       const isComb = f.fileName.toLowerCase().includes("combined") || /ep\s*\(/i.test(f.fileName);
       if (typeFilter === "combined" && !isComb) return false;
@@ -95,16 +123,24 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
         return infoA.subRank - infoB.subRank;
       }
     });
-  }, [files, sortOrder, typeFilter, qualityFilter, searchQuery]);
+  }, [files, selectedSeason, sortOrder, typeFilter, qualityFilter, searchQuery]);
 
-  // Counts for tabs
+  // Counts for tabs based on current season selection
+  const seasonFiles = useMemo(() => {
+    if (selectedSeason === "all") return files;
+    return files.filter((f) => {
+      const m = f.fileName.match(/S0?(\d+)/i);
+      return m && parseInt(m[1], 10) === selectedSeason;
+    });
+  }, [files, selectedSeason]);
+
   const combinedCount = useMemo(
-    () => files.filter((f) => f.fileName.toLowerCase().includes("combined") || /ep\s*\(/i.test(f.fileName)).length,
-    [files]
+    () => seasonFiles.filter((f) => f.fileName.toLowerCase().includes("combined") || /ep\s*\(/i.test(f.fileName)).length,
+    [seasonFiles]
   );
   const singleCount = useMemo(
-    () => files.filter((f) => !f.fileName.toLowerCase().includes("combined") && !/ep\s*\(/i.test(f.fileName) && !f.fileName.includes("File #")).length,
-    [files]
+    () => seasonFiles.filter((f) => !f.fileName.toLowerCase().includes("combined") && !/ep\s*\(/i.test(f.fileName) && !f.fileName.includes("File #")).length,
+    [seasonFiles]
   );
 
   return (
@@ -137,6 +173,64 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
           </button>
         </div>
       </div>
+
+      {/* Season Selector Tabs (Prominently separates Season 1 and Season 2) */}
+      {availableSeasons.length > 1 && (
+        <div className="flex flex-wrap items-center gap-2 p-2 rounded-2xl bg-white/[0.03] border border-white/10">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-400 pl-2 pr-1 flex items-center gap-1.5">
+            <Layers size={14} className="text-amber-400" />
+            <span>Season:</span>
+          </span>
+
+          {availableSeasons.map((sNum) => {
+            const count = files.filter((f) => {
+              const m = f.fileName.match(/S0?(\d+)/i);
+              return m && parseInt(m[1], 10) === sNum;
+            }).length;
+
+            const isSelected = selectedSeason === sNum;
+
+            return (
+              <button
+                key={sNum}
+                onClick={() => setSelectedSeason(sNum)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  isSelected
+                    ? "bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black shadow-md scale-[1.02]"
+                    : "bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10"
+                }`}
+              >
+                <span>Season {sNum}</span>
+                <span
+                  className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                    isSelected ? "bg-black/25 text-slate-950 font-bold" : "bg-white/10 text-amber-300"
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+
+          <button
+            onClick={() => setSelectedSeason("all")}
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              selectedSeason === "all"
+                ? "bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black shadow-md"
+                : "bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10"
+            }`}
+          >
+            <span>All Seasons</span>
+            <span
+              className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                selectedSeason === "all" ? "bg-black/25 text-slate-950 font-bold" : "bg-white/10 text-slate-400"
+              }`}
+            >
+              {files.length}
+            </span>
+          </button>
+        </div>
+      )}
 
       {/* Filter Toolbar: Type Pills + Quality Pills + Quick Search */}
       <div className="flex flex-wrap items-center justify-between gap-3 bg-[#0c1220]/60 p-3 rounded-2xl border border-white/5">

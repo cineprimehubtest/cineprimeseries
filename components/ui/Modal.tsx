@@ -51,13 +51,13 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 md:p-6 overflow-y-auto bg-black/85 backdrop-blur-md animate-fade-in"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
     >
       <div
-        className={`relative w-full ${maxWidthStyles[maxWidth]} max-h-[92vh] flex flex-col rounded-3xl bg-slate-950/85 border border-white/10 shadow-glass overflow-hidden text-slate-100 ${className}`}
+        className={`relative w-full ${maxWidthStyles[maxWidth]} max-h-[88vh] my-auto flex flex-col rounded-3xl bg-[#080b14] border border-white/15 shadow-2xl overflow-hidden text-slate-100 ${className}`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header - only show if title is provided */}
@@ -69,7 +69,7 @@ export const Modal: React.FC<ModalProps> = ({
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              className="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
             >
               <X size={18} />
             </button>
@@ -77,7 +77,7 @@ export const Modal: React.FC<ModalProps> = ({
         ) : null}
 
         {/* Content body */}
-        <div className={`overflow-y-auto custom-scrollbar flex-1 ${title ? "p-4 md:p-6" : "p-4 md:p-5"}`}>
+        <div className={`overflow-y-auto custom-scrollbar flex-1 overscroll-contain ${title ? "p-4 md:p-6" : "p-4 md:p-5"}`}>
           {children}
         </div>
       </div>
