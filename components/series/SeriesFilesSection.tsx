@@ -66,13 +66,23 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
     return sorted.length > 1 ? sorted[0] : "all";
   });
 
-  // Files for currently active season
+  // Files for currently active season (deduplicated)
   const seasonFiles = useMemo(() => {
-    if (selectedSeason === "all") return files;
-    return files.filter((f) => {
+    const raw = selectedSeason === "all" ? files : files.filter((f) => {
       const m = f.fileName.match(/S0?(\d+)/i);
       return m && parseInt(m[1], 10) === selectedSeason;
     });
+
+    const seen = new Set<string>();
+    const unique: LeechedFileItem[] = [];
+    for (const f of raw) {
+      const key = `${f.fileName}___${f.sizeFormatted || ""}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        unique.push(f);
+      }
+    }
+    return unique;
   }, [files, selectedSeason]);
 
   // Extract all available qualities present in this season (ordered from UHD to SD)
@@ -95,7 +105,7 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
     return qOrder.filter((q) => found.has(q));
   }, [seasonFiles]);
 
-  // Filter and sort files
+  // Filter, deduplicate, and sort files
   const filteredAndSortedFiles = useMemo(() => {
     let result = files.filter((f) => {
       // Ignore stickers or non-files
@@ -144,8 +154,19 @@ export const SeriesFilesSection: React.FC<SeriesFilesSectionProps> = ({ files = 
       return true;
     });
 
+    // Deduplicate by fileName + sizeFormatted
+    const seen = new Set<string>();
+    const uniqueResult: LeechedFileItem[] = [];
+    for (const item of result) {
+      const key = `${item.fileName}___${item.sizeFormatted || ""}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        uniqueResult.push(item);
+      }
+    }
+
     // Sort order
-    return result.sort((a, b) => {
+    return uniqueResult.sort((a, b) => {
       const infoA = getBatchInfo(a);
       const infoB = getBatchInfo(b);
 

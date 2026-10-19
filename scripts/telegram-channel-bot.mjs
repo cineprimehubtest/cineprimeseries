@@ -122,16 +122,27 @@ function parseFileInfo(rawFileName, messageId, activeSeries = null, fileSize = 0
     .replace(/\.(mkv|mp4|avi|webm|mov)$/i, '')
     .replace(/_/g, ' ');
 
+  // Clean watermark handles before quality detection so @Tentkotta_4k doesn't trigger 4K
+  let cleanNameForQuality = name
+    .replace(/@\w+/gi, '')
+    .replace(/tentkotta_4k/gi, '')
+    .replace(/4k_videosongs/gi, '');
+
   // Parse Quality (Check filename tags first, fallback to byte size)
   let quality = '1080P';
-  if (/2160p|4k\b|uhd/i.test(name)) quality = '4K';
-  else if (/1080p|1080\b|fhd/i.test(name)) quality = '1080P';
-  else if (/720p|720\b|hd\b/i.test(name)) quality = '720P';
-  else if (/480p|480\b|sd\b/i.test(name)) quality = '480P';
+  if (/2160p|uhd/i.test(cleanNameForQuality) || /\b4k\b/i.test(cleanNameForQuality)) quality = '4K';
+  else if (/1080p|1080\b|fhd/i.test(cleanNameForQuality)) quality = '1080P';
+  else if (/720p|720\b|hd\b/i.test(cleanNameForQuality)) quality = '720P';
+  else if (/480p|480\b|sd\b/i.test(cleanNameForQuality)) quality = '480P';
   else if (fileSize > 0) {
     if (fileSize >= 550 * 1024 * 1024) quality = '1080P';
     else if (fileSize >= 320 * 1024 * 1024) quality = '720P';
     else quality = '480P';
+  }
+
+  // Sanity check: a real 4K UHD file is never under 600MB
+  if (quality === '4K' && fileSize > 0 && fileSize < 600 * 1024 * 1024) {
+    quality = fileSize >= 320 * 1024 * 1024 ? '720P' : '480P';
   }
 
   // Parse Codec
@@ -458,11 +469,18 @@ async function indexFileFromChannel(messageId, rawFileName, fileSize, rawCaption
 
     lastActiveSeriesSlug = series.slug;
 
-    // Add or update file item in series.files - strictly by messageId / id
+    // Add or update file item in series.files - by messageId or semantic duplicate
     const fileId = `tg-${messageId}`;
-    const fileIndex = (series.files || []).findIndex(
+    let fileIndex = (series.files || []).findIndex(
       (f) => f.id === fileId || f.channelMessageId === messageId
     );
+
+    // If not matched by messageId, check if exact same episode & size already exists (e.g. forwarded twice)
+    if (fileIndex === -1 && parsed.cleanFileName) {
+      fileIndex = (series.files || []).findIndex(
+        (f) => f.fileName === parsed.cleanFileName && f.sizeFormatted === sizeFormatted
+      );
+    }
 
     const fileItem = {
       id: fileId,
